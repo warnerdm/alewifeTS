@@ -1,6 +1,9 @@
-# raw instrument files never live here
+# raw instrument files: copies of the used tows' files are in data/raw/acoustic (python/copy_tow_files.py; archived
+# separately); the list is committed
 *.dt4
 *.raw
+data/raw/acoustic/*
+!data/raw/acoustic/tow_files.csv
 
 # RStudio
 .Rhistory

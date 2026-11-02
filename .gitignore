@@ -1,0 +1,31 @@
+# raw instrument files never live here
+*.dt4
+*.raw
+
+# RStudio
+.Rhistory
+.Rproj.user/
+
+__pycache__/
+.ipynb_checkpoints/
+
+# figures and run logs (rebuilt by the scripts)
+*.png
+*.log
+
+# echograms (pydt4 plot_all_echograms; 196 MB)
+data/derived/echograms/
+# whole-column targets and per-target track files (pydt4 run_tow_batch st_min_depth_m / track_tows.py; ~190 MB);
+# tracks.csv and the flag tables are kept
+data/derived/whole_column/single_targets_column/
+data/derived/whole_column/tracks/targets/
+data/derived/whole_column/tracks34/
+data/derived/whole_column/_track34_*.csv
+
+# review pages: built by review/build_tow_review.py and pydt4 map_review.py (rebuild instead of committing)
+review/tow_review.html
+review/gps_maps/
+
+# knitted manuscript output
+manuscript/*.docx
+manuscript/*.html

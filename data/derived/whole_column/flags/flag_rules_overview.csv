@@ -1,0 +1,9 @@
+rule,tracks_flagged,tows_with_flag,flagged_below_minus40,flagged_within_expected_alewife
+rel10,133,68,37,36
+rel13,57,37,8,8
+rel16,32,24,2,2
+abs40,198,76,0,0
+abs35,50,32,0,0
+abs30,16,13,0,0
+big3,465,81,337,332
+comb,465,81,337,332

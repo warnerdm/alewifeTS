@@ -1,0 +1,6 @@
+vessel,year,format,transducer,reason
+88,2017,dt4,T120P076,"transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02; bloaterTS config/set_aside.csv, 2026-10-20: deep tows read TS high, TS rising with range within tows, off-axis over-correction; mechanism unknown)"
+88,2019,dt4,T120P076,"transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+88,2021,dt4,T120P076,"transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+17,2023,dt4,T120P076,"transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+17,2024,dt4,T120P076,"transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"

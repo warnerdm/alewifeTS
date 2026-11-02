@@ -1,0 +1,205 @@
+OP_ID,lake,year,vessel,transect,fishing_depth_m,decision,reason,note,reviewer,date
+58039,Michigan,2005,88,nn8,7.4,exclude,large targets,,Dave Warner,11/2/2026
+58054,Michigan,2005,88,nn11,23.4,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+58059,Michigan,2005,88,no4,23.1,exclude,target number,reason as written: no targets,Dave Warner,11/2/2026
+58062,Michigan,2005,88,wn4,7.6,include,,,Dave Warner,11/2/2026
+58066,Michigan,2005,88,no2,20.7,include,,,Dave Warner,11/2/2026
+58067,Michigan,2005,88,no2,73.6,exclude,wrong habitat/depth,"reason as written: this was a bloater tow, too deep for an alewife tow",Dave Warner,11/2/2026
+58070,Michigan,2005,88,no1,11.1,include,,,Dave Warner,11/2/2026
+58073,Michigan,2005,88,no1,20.6,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+58083,Michigan,2005,88,so5,14.2,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+58088,Michigan,2005,88,so5,13.2,include,,,Dave Warner,11/2/2026
+58090,Michigan,2005,88,so4,74.3,exclude,wrong habitat/depth,"reason as written: this was a bloater tow, too deep for an alewife tow",Dave Warner,11/2/2026
+58095,Michigan,2005,88,so4,9.5,include,,,Dave Warner,11/2/2026
+58100,Michigan,2005,88,wn2,6.5,include,,,Dave Warner,11/2/2026
+58102,Michigan,2005,88,so3,16.6,exclude,large targets,,Dave Warner,11/2/2026
+58104,Michigan,2005,88,so3,60.4,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+58109,Michigan,2005,88,wn1,9.9,include,,,Dave Warner,11/2/2026
+58111,Michigan,2005,88,wn1,14.8,exclude,large targets,,Dave Warner,11/2/2026
+58113,Michigan,2005,88,so1,7.4,include,,,Dave Warner,11/2/2026
+58117,Michigan,2005,88,so1,23.8,exclude,target number,reason as written: no targets,Dave Warner,11/2/2026
+58592,Michigan,2005,17,sn1,8.8,include,,,Dave Warner,11/2/2026
+58595,Michigan,2005,17,sn2,5,include,,,Dave Warner,11/2/2026
+58605,Michigan,2005,17,nn1,9.5,exclude,bottom detection,reason as written: bottom intrusion,Dave Warner,11/2/2026
+59317,Michigan,2006,88,nn9,6.5,include,,,Dave Warner,11/2/2026
+76219,Michigan,2007,88,no1,8,include,,,Dave Warner,11/2/2026
+76229,Michigan,2007,88,so3,7,exclude,tow timing/coverage,"matched files are not the logged trawl (trawling elsewhere): GPS 59.1 km from the logged start and 7.0 km from the logged end, 3.4 kn, 67% of minutes at trawl speed (gps_match_check.csv)",Dave Warner (recorded by Claude),11/2/2026
+76230,Michigan,2007,88,so3,12,exclude,large targets,,Dave Warner,11/2/2026
+76948,Michigan,2007,17,nn1,8,include,,,Dave Warner,11/2/2026
+76952,Michigan,2007,17,sn3,14,include,,,Dave Warner,11/2/2026
+76956,Michigan,2007,17,sn2,8,include,,,Dave Warner,11/2/2026
+76957,Michigan,2007,17,sn2,7,include,,,Dave Warner,11/2/2026
+76959,Michigan,2007,17,so1,15,include,,,Dave Warner,11/2/2026
+77501,Michigan,2008,88,nn5,11,include,,,Dave Warner,11/2/2026
+77519,Michigan,2008,88,wn2,7,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+77537,Michigan,2008,88,so4,13,include,,,Dave Warner,11/2/2026
+77539,Michigan,2008,88,so2,11,include,,,Dave Warner,11/2/2026
+77541,Michigan,2008,88,wn1,12,include,,,Dave Warner,11/2/2026
+77546,Michigan,2008,88,so2,9,include,,,Dave Warner,11/2/2026
+78785,Michigan,2009,88,wn2,6,include,,,Dave Warner,11/2/2026
+78795,Michigan,2009,88,wn1,15,include,,,Dave Warner,11/2/2026
+78798,Michigan,2009,88,sn5,10,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+78799,Michigan,2009,88,sn5,18,include,,,Dave Warner,11/2/2026
+79134,Michigan,2009,17,sn2,15.2,include,,,Dave Warner,11/2/2026
+79158,Michigan,2009,17,nn1,20.1,include,,,Dave Warner,11/2/2026
+79159,Michigan,2009,17,no5,12.2,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+80756,Michigan,2010,88,nn6,20,exclude,other,"reason as written: passive data in middle of tow, mostly large targets",Dave Warner,11/2/2026
+80757,Michigan,2010,88,nn6,5,include,,,Dave Warner,11/2/2026
+80760,Michigan,2010,88,no5,7,include,,,Dave Warner,11/2/2026
+80761,Michigan,2010,88,no5,14,include,,,Dave Warner,11/2/2026
+81764,Michigan,2010,88,no3,15,include,,,Dave Warner,11/2/2026
+81765,Michigan,2010,88,no3,15,include,,,Dave Warner,11/2/2026
+81837,Michigan,2010,17,so2,20.1,exclude,bottom detection,,Dave Warner,11/2/2026
+81840,Michigan,2010,17,so1,71.7,exclude,tow timing/coverage,"matched files are not the logged trawl (trawling elsewhere): GPS 10.9 km from the logged start and 11.4 km from the logged end, 2.6 kn, 20% of minutes at trawl speed (gps_match_check.csv)",Dave Warner (recorded by Claude),11/2/2026
+81847,Michigan,2010,17,nn2,10.1,include,,,Dave Warner,11/2/2026
+81850,Michigan,2010,17,nn3,11,include,,,Dave Warner,11/2/2026
+83156,Michigan,2011,88,nn12,5,include,,,Dave Warner,11/2/2026
+83167,Michigan,2011,88,so3,16,include,,,Dave Warner,11/2/2026
+83171,Michigan,2011,88,wn1,12,include,,,Dave Warner,11/2/2026
+83437,Michigan,2011,35,no5,15.2,include,,,Dave Warner,11/2/2026
+83507,Michigan,2011,17,sn1,22,include,,,Dave Warner,11/2/2026
+83510,Michigan,2011,17,sn3,6,include,,,Dave Warner,11/2/2026
+83515,Michigan,2011,17,nn5,10,include,,,Dave Warner,11/2/2026
+85021,Michigan,2012,88,no7,14,include,,,Dave Warner,11/2/2026
+85034,Michigan,2012,88,no3,10,include,,,Dave Warner,11/2/2026
+85040,Michigan,2012,88,no2,7,include,,,Dave Warner,11/2/2026
+85045,Michigan,2012,88,wn3,15,include,,,Dave Warner,11/2/2026
+85056,Michigan,2012,88,so3,11,include,,,Dave Warner,11/2/2026
+85057,Michigan,2012,88,so3,9,include,,,Dave Warner,11/2/2026
+85081,Michigan,2012,88,sn1,12,include,,,Dave Warner,11/2/2026
+85082,Michigan,2012,88,sn1,15,include,,,Dave Warner,11/2/2026
+85680,Michigan,2012,35,nn6,5.2,include,,,Dave Warner,11/2/2026
+85681,Michigan,2012,35,nn7,7.9,include,,,Dave Warner,11/2/2026
+85927,Michigan,2012,17,nn5,10,include,,,Dave Warner,11/2/2026
+85928,Michigan,2012,17,no6,15,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+85932,Michigan,2012,17,no1,20,include,,,Dave Warner,11/2/2026
+85936,Michigan,2012,17,sn2,10,include,,,Dave Warner,11/2/2026
+86670,Michigan,2013,88,no4,10,include,,,Dave Warner,11/2/2026
+86682,Michigan,2013,88,nn14,10,include,,,Dave Warner,11/2/2026
+86684,Michigan,2013,88,nn14,5,include,,,Dave Warner,11/2/2026
+86716,Michigan,2013,88,wn1,10,include,,,Dave Warner,11/2/2026
+86718,Michigan,2013,88,wn1,50,exclude,wrong habitat/depth,"reason as written: this was a bloater tow, too deep for an alewife tow",Dave Warner,11/2/2026
+87173,Michigan,2013,17,nn8,20,include,,,Dave Warner,11/2/2026
+87176,Michigan,2013,17,nn7,17.5,include,,,Dave Warner,11/2/2026
+87185,Michigan,2013,17,nn1,12,exclude,crowding,reason as written: schooling; alewife are schooling here,Dave Warner,11/2/2026
+87190,Michigan,2013,17,sn3,15,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+87191,Michigan,2013,17,sn2,20,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+87237,Michigan,2013,35,nn10,12.8,include,,,Dave Warner,11/2/2026
+87239,Michigan,2013,35,nn11,5.4,include,,,Dave Warner,11/2/2026
+87242,Michigan,2013,35,nn12,12,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+87243,Michigan,2013,35,no5,7.9,include,,uncertain about this one,Dave Warner,11/2/2026
+88608,Michigan,2014,88,wn1,6,include,,,Dave Warner,11/2/2026
+88649,Michigan,2014,88,nn9,5,include,,,Dave Warner,11/2/2026
+89415,Michigan,2014,17,sn5,12,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+89416,Michigan,2014,17,sn5,25,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+89418,Michigan,2014,17,sn3,10,include,,,Dave Warner,11/2/2026
+89421,Michigan,2014,17,sn4,10,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+92784,Michigan,2015,88,sn1,5,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+92785,Michigan,2015,88,sn1,7,exclude,bottom detection,reason as written: bottom intrusion,Dave Warner,11/2/2026
+93781,Michigan,2015,17,nn3,19,include,,,Dave Warner,11/2/2026
+93784,Michigan,2015,17,nn2,10,include,,,Dave Warner,11/2/2026
+93790,Michigan,2015,17,sn3,20,include,,,Dave Warner,11/2/2026
+93794,Michigan,2015,17,sn2,15,include,,,Dave Warner,11/2/2026
+93796,Michigan,2015,17,nn0,15,include,,,Dave Warner,11/2/2026
+95458,Michigan,2016,88,no2,7.5,include,,,Dave Warner,11/2/2026
+95507,Michigan,2016,88,wn3,6,include,,,Dave Warner,11/2/2026
+95562,Michigan,2016,88,wn1,6,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+95625,Michigan,2016,88,nne1,13.5,include,,,Dave Warner,11/2/2026
+96306,Michigan,2016,17,sn5,24,include,,,Dave Warner,11/2/2026
+96313,Michigan,2016,17,so3,18,include,,Nv is close,Dave Warner,11/2/2026
+96319,Michigan,2016,17,no1,20,include,,,Dave Warner,11/2/2026
+104077,Michigan,2017,88,wn3,15,include,,,Dave Warner,11/2/2026
+104090,Michigan,2017,88,so7,13,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+104126,Michigan,2017,88,so2,6.5,include,,,Dave Warner,11/2/2026
+104128,Michigan,2017,88,so2,16,include,,,Dave Warner,11/2/2026
+104141,Michigan,2017,88,so3,5,include,,,Dave Warner,11/2/2026
+104154,Michigan,2017,88,so1,11.5,include,,,Dave Warner,11/2/2026
+104178,Michigan,2017,88,sn1,5.1,include,,,Dave Warner,11/2/2026
+104180,Michigan,2017,88,sn1,7.6,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+105050,Michigan,2017,17,sn5,24,include,,,Dave Warner,11/2/2026
+105053,Michigan,2017,17,sn3,11.2,include,,,Dave Warner,11/2/2026
+105054,Michigan,2017,17,sn3,19.5,include,,,Dave Warner,11/2/2026
+106243,Michigan,2018,35,nn3,5.7,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+106246,Michigan,2018,35,no3,13.4,include,,,Dave Warner,11/2/2026
+106360,Michigan,2018,88,wn3,6,include,,,Dave Warner,11/2/2026
+106368,Michigan,2018,88,so6,10.2,include,,,Dave Warner,11/2/2026
+106378,Michigan,2018,88,wn2,9.3,include,,this one has maybe too many masks,Dave Warner,11/2/2026
+106387,Michigan,2018,88,so4,14.3,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+106396,Michigan,2018,88,so2,9.3,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+106397,Michigan,2018,88,so2,6.1,include,,,Dave Warner,11/2/2026
+106402,Michigan,2018,88,wn1,10.1,exclude,crowding,reason as written: schooling,Dave Warner,11/2/2026
+106403,Michigan,2018,88,wn1,5.1,include,,,Dave Warner,11/2/2026
+106415,Michigan,2018,88,sn1,5.2,include,,,Dave Warner,11/2/2026
+106431,Michigan,2018,88,so1,10.5,include,,,Dave Warner,11/2/2026
+106432,Michigan,2018,88,so1,10.3,include,,,Dave Warner,11/2/2026
+107718,Michigan,2018,17,no1,13,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+107719,Michigan,2018,17,nn1,10,exclude,large targets,,Dave Warner,11/2/2026
+107720,Michigan,2018,17,so5,11,include,,,Dave Warner,11/2/2026
+107723,Michigan,2018,17,sn5,6,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+107724,Michigan,2018,17,sn4,25,include,,,Dave Warner,11/2/2026
+111192,Michigan,2019,88,sn1,5,include,,,Dave Warner,11/2/2026
+111212,Michigan,2019,88,wn1,10.5,include,,,Dave Warner,11/2/2026
+111221,Michigan,2019,88,so2,10.9,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+111226,Michigan,2019,88,wn2,7.6,include,,,Dave Warner,11/2/2026
+111238,Michigan,2019,88,so4,9.4,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+111250,Michigan,2019,88,no2,8.3,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+111259,Michigan,2019,88,wn4,7.4,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+111288,Michigan,2019,88,no4,13,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+111301,Michigan,2019,88,nn7,13.1,include,,,Dave Warner,11/2/2026
+112423,Michigan,2019,17,sn2,10.6,include,,,Dave Warner,11/2/2026
+112427,Michigan,2019,17,nn1,5.7,exclude,tow timing/coverage,"matched files are not the logged trawl (trawling elsewhere): GPS 6.8 km from the logged start and 5.3 km from the logged end, 2.5 kn, 95% of minutes at trawl speed (gps_match_check.csv)",Dave Warner (recorded by Claude),11/2/2026
+112428,Michigan,2019,17,sn5,9.6,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+112430,Michigan,2019,17,nn3,17,include,,,Dave Warner,11/2/2026
+112431,Michigan,2019,17,nn5,31.6,include,,,Dave Warner,11/2/2026
+118403,Michigan,2021,88,sn2,6,include,,,Dave Warner,11/2/2026
+118404,Michigan,2021,88,sn2,28.8,include,,,Dave Warner,11/2/2026
+118492,Michigan,2021,88,no1,14.1,include,,,Dave Warner,11/2/2026
+119389,Michigan,2021,17,sn4,9,include,,,Dave Warner,11/2/2026
+119394,Michigan,2021,17,sn7,7,include,,,Dave Warner,11/2/2026
+119395,Michigan,2021,17,sn10,18,include,,,Dave Warner,11/2/2026
+119403,Michigan,2021,35,no2,8.2,exclude,tow timing/coverage,"matched files are not the logged trawl (transect speed): GPS 13.0 km from the logged start and 9.3 km from the logged end, 8.2 kn, 0% of minutes at trawl speed (gps_match_check.csv)",Dave Warner (recorded by Claude),11/2/2026
+121420,Michigan,2022,88,wn3,6.9,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+121469,Michigan,2022,88,wn1,16.9,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+121696,Michigan,2022,17,nn1,20,include,,,Dave Warner,11/2/2026
+121697,Michigan,2022,17,sn7,13,include,,,Dave Warner,11/2/2026
+121701,Michigan,2022,17,sn4,10,include,,,Dave Warner,11/2/2026
+121708,Michigan,2022,17,nn2,10,exclude,bottom detection,reason as written: bottom inclusion,Dave Warner,11/2/2026
+122026,Michigan,2022,35,nn6,14.5,include,,,Dave Warner,11/2/2026
+122027,Michigan,2022,35,nn6,6.7,include,,,Dave Warner,11/2/2026
+122030,Michigan,2022,35,nn5,5.9,include,,,Dave Warner,11/2/2026
+122033,Michigan,2022,35,nn4,5.5,include,,,Dave Warner,11/2/2026
+124044,Michigan,2023,88,wn1,9.8,include,,,Dave Warner,11/2/2026
+124048,Michigan,2023,88,wn2,10.6,include,,,Dave Warner,11/2/2026
+124054,Michigan,2023,88,wn3,13.8,include,,,Dave Warner,11/2/2026
+124159,Michigan,2023,35,nnw3,9.5,include,,has a lot of big tracks,Dave Warner,11/2/2026
+124165,Michigan,2023,35,nnw1,12.7,include,,,Dave Warner,11/2/2026
+124168,Michigan,2023,35,no3,9.8,include,,,Dave Warner,11/2/2026
+124774,Michigan,2023,17,sn2,6,include,,,Dave Warner,11/2/2026
+127534,Michigan,2024,35,nnw1,15.8,include,,,Dave Warner,11/2/2026
+127535,Michigan,2024,35,nnw1,29.6,include,,,Dave Warner,11/2/2026
+127540,Michigan,2024,35,no4,7.7,include,,,Dave Warner,11/2/2026
+127542,Michigan,2024,35,nnw4,7.3,include,,,Dave Warner,11/2/2026
+127576,Michigan,2024,17,nne4,12,include,,,Dave Warner,11/2/2026
+127581,Michigan,2024,17,sn4,7,exclude,large targets,,Dave Warner,11/2/2026
+127588,Michigan,2024,17,sn1,8,include,,,Dave Warner,11/2/2026
+57445,Michigan,2004,88,no1,15.1,include,,,Dave Warner,11/2/2026
+57447,Michigan,2004,88,so3,28.5,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+57448,Michigan,2004,88,so2,18.5,include,,,Dave Warner,11/2/2026
+58596,Michigan,2005,17,sn2,15.4,include,,,Dave Warner,11/2/2026
+58597,Michigan,2005,17,so2,16.4,include,,,Dave Warner,11/2/2026
+58604,Michigan,2005,17,nn1,10.6,include,,,Dave Warner,11/2/2026
+58614,Michigan,2005,17,nn6,17.7,include,,,Dave Warner,11/2/2026
+59339,Michigan,2006,88,wn3,9.8,include,,,Dave Warner,11/2/2026
+79137,Michigan,2009,17,sn4,51.8,exclude,tow timing/coverage,reason as written: time-corrected but bottom depth is too shallow for the tow here. Probably not a match.,Dave Warner,11/2/2026
+81836,Michigan,2010,17,so2,14,exclude,bottom detection,reason as written: bottom intrusion,Dave Warner,11/2/2026
+81838,Michigan,2010,17,sn2,20.5,exclude,target number,reason as written: sparse targets,Dave Warner,11/2/2026
+81839,Michigan,2010,17,so1,9.5,include,,,Dave Warner,11/2/2026
+81841,Michigan,2010,17,sn1,18,include,,,Dave Warner,11/2/2026
+81843,Michigan,2010,17,so4,22,exclude,large targets,,Dave Warner,11/2/2026
+81845,Michigan,2010,17,nn1,11.9,include,,,Dave Warner,11/2/2026
+81848,Michigan,2010,17,no4,21,include,,,Dave Warner,11/2/2026
+85064,Michigan,2012,88,so2,12,include,,,Dave Warner,11/2/2026
+86694,Michigan,2013,88,wn2,5,include,,,Dave Warner,11/2/2026
+89430,Michigan,2014,35,nn8,10,exclude,other,reason as written: acoustic problem; some kind of crosstalk,Dave Warner,11/2/2026
+122023,Michigan,2022,35,no3,14.8,include,,,Dave Warner,11/2/2026
+124167,Michigan,2023,35,no3,9,include,,,Dave Warner,11/2/2026

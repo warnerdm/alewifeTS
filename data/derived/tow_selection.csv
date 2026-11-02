@@ -1,0 +1,205 @@
+OP_ID,lake,year,vessel,transect,fishing_depth_m,acoustic_format,decision,reason,targets_used,fish,status,why
+58039,Michigan,2005,88,nn8,7.4,dt4,exclude,large targets,74,37,excluded,review: exclude (large targets)
+58054,Michigan,2005,88,nn11,23.4,dt4,exclude,target number,4,3,excluded,review: exclude (target number)
+58059,Michigan,2005,88,no4,23.1,dt4,exclude,target number,0,0,excluded,review: exclude (target number)
+58062,Michigan,2005,88,wn4,7.6,dt4,include,,14,11,used,
+58066,Michigan,2005,88,no2,20.7,dt4,include,,44,13,used,
+58067,Michigan,2005,88,no2,73.6,dt4,exclude,wrong habitat/depth,57,9,excluded,review: exclude (wrong habitat/depth)
+58070,Michigan,2005,88,no1,11.1,dt4,include,,294,215,used,
+58073,Michigan,2005,88,no1,20.6,dt4,exclude,target number,1,1,excluded,review: exclude (target number)
+58083,Michigan,2005,88,so5,14.2,dt4,exclude,target number,4,3,excluded,review: exclude (target number)
+58088,Michigan,2005,88,so5,13.2,dt4,include,,740,391,used,
+58090,Michigan,2005,88,so4,74.3,dt4,exclude,wrong habitat/depth,42,8,excluded,review: exclude (wrong habitat/depth)
+58095,Michigan,2005,88,so4,9.5,dt4,include,,82,68,used,
+58100,Michigan,2005,88,wn2,6.5,dt4,include,,104,83,used,
+58102,Michigan,2005,88,so3,16.6,dt4,exclude,large targets,154,117,excluded,review: exclude (large targets)
+58104,Michigan,2005,88,so3,60.4,dt4,exclude,target number,4,2,excluded,review: exclude (target number)
+58109,Michigan,2005,88,wn1,9.9,dt4,include,,20,17,used,
+58111,Michigan,2005,88,wn1,14.8,dt4,exclude,large targets,18,16,excluded,review: exclude (large targets)
+58113,Michigan,2005,88,so1,7.4,dt4,include,,123,113,used,
+58117,Michigan,2005,88,so1,23.8,dt4,exclude,target number,0,0,excluded,review: exclude (target number)
+58592,Michigan,2005,17,sn1,8.8,dt4,include,,910,357,used,
+58595,Michigan,2005,17,sn2,5,dt4,include,,68,32,used,
+58605,Michigan,2005,17,nn1,9.5,dt4,exclude,bottom detection,130,50,excluded,review: exclude (bottom detection)
+59317,Michigan,2006,88,nn9,6.5,dt4,include,,117,56,used,
+76219,Michigan,2007,88,no1,8,dt4,include,,390,223,used,
+76229,Michigan,2007,88,so3,7,dt4,exclude,tow timing/coverage,130,86,excluded,review: exclude (tow timing/coverage)
+76230,Michigan,2007,88,so3,12,dt4,exclude,large targets,607,255,excluded,review: exclude (large targets)
+76948,Michigan,2007,17,nn1,8,dt4,include,,56,33,used,
+76952,Michigan,2007,17,sn3,14,dt4,include,,16,10,used,
+76956,Michigan,2007,17,sn2,8,dt4,include,,195,136,used,
+76957,Michigan,2007,17,sn2,7,dt4,include,,63,32,used,
+76959,Michigan,2007,17,so1,15,dt4,include,,986,535,used,
+77501,Michigan,2008,88,nn5,11,dt4,include,,230,69,used,
+77519,Michigan,2008,88,wn2,7,dt4,exclude,target number,8,7,excluded,review: exclude (target number)
+77537,Michigan,2008,88,so4,13,dt4,include,,544,373,used,
+77539,Michigan,2008,88,so2,11,dt4,include,,306,178,used,
+77541,Michigan,2008,88,wn1,12,dt4,include,,13,7,used,
+77546,Michigan,2008,88,so2,9,dt4,include,,185,110,used,
+78785,Michigan,2009,88,wn2,6,dt4,include,,31,16,used,
+78795,Michigan,2009,88,wn1,15,dt4,include,,109,39,used,
+78798,Michigan,2009,88,sn5,10,dt4,exclude,target number,2,1,excluded,review: exclude (target number)
+78799,Michigan,2009,88,sn5,18,dt4,include,,233,117,used,
+79134,Michigan,2009,17,sn2,15.2,dt4,include,,63,14,used,
+79158,Michigan,2009,17,nn1,20.1,dt4,include,,101,51,used,
+79159,Michigan,2009,17,no5,12.2,dt4,exclude,target number,8,4,excluded,review: exclude (target number)
+80756,Michigan,2010,88,nn6,20,dt4,exclude,other,67,12,excluded,review: exclude (other)
+80757,Michigan,2010,88,nn6,5,dt4,include,,62,41,used,
+80760,Michigan,2010,88,no5,7,dt4,include,,77,66,used,
+80761,Michigan,2010,88,no5,14,dt4,include,,189,135,used,
+81764,Michigan,2010,88,no3,15,dt4,include,,337,243,used,
+81765,Michigan,2010,88,no3,15,dt4,include,,257,166,used,
+81837,Michigan,2010,17,so2,20.1,dt4,exclude,bottom detection,34,29,excluded,review: exclude (bottom detection)
+81840,Michigan,2010,17,so1,71.7,dt4,exclude,tow timing/coverage,0,0,excluded,review: exclude (tow timing/coverage)
+81847,Michigan,2010,17,nn2,10.1,dt4,include,,28,9,used,
+81850,Michigan,2010,17,nn3,11,dt4,include,,68,43,used,
+83156,Michigan,2011,88,nn12,5,dt4,include,,22,17,used,
+83167,Michigan,2011,88,so3,16,dt4,include,,24,7,used,
+83171,Michigan,2011,88,wn1,12,dt4,include,,37,13,used,
+83437,Michigan,2011,35,no5,15.2,raw,include,,52,23,used,
+83507,Michigan,2011,17,sn1,22,dt4,include,,17,9,used,
+83510,Michigan,2011,17,sn3,6,dt4,include,,79,73,used,
+83515,Michigan,2011,17,nn5,10,dt4,include,,222,135,used,
+85021,Michigan,2012,88,no7,14,dt4,include,,375,286,used,
+85034,Michigan,2012,88,no3,10,dt4,include,,23,18,used,
+85040,Michigan,2012,88,no2,7,dt4,include,,104,64,used,
+85045,Michigan,2012,88,wn3,15,dt4,include,,99,35,used,
+85056,Michigan,2012,88,so3,11,dt4,include,,321,209,used,
+85057,Michigan,2012,88,so3,9,dt4,include,,169,97,used,
+85081,Michigan,2012,88,sn1,12,dt4,include,,168,50,used,
+85082,Michigan,2012,88,sn1,15,dt4,include,,160,45,used,
+85680,Michigan,2012,35,nn6,5.2,raw,include,,33,29,used,
+85681,Michigan,2012,35,nn7,7.9,raw,include,,863,403,used,
+85927,Michigan,2012,17,nn5,10,dt4,include,,234,122,used,
+85928,Michigan,2012,17,no6,15,dt4,exclude,target number,8,8,excluded,review: exclude (target number)
+85932,Michigan,2012,17,no1,20,dt4,include,,222,141,used,
+85936,Michigan,2012,17,sn2,10,dt4,include,,586,322,used,
+86670,Michigan,2013,88,no4,10,dt4,include,,12,11,used,
+86682,Michigan,2013,88,nn14,10,dt4,include,,25,20,used,
+86684,Michigan,2013,88,nn14,5,dt4,include,,66,38,used,
+86716,Michigan,2013,88,wn1,10,dt4,include,,52,25,used,
+86718,Michigan,2013,88,wn1,50,dt4,exclude,wrong habitat/depth,23,2,excluded,review: exclude (wrong habitat/depth)
+87173,Michigan,2013,17,nn8,20,dt4,include,,52,30,used,
+87176,Michigan,2013,17,nn7,17.5,dt4,include,,102,73,used,
+87185,Michigan,2013,17,nn1,12,dt4,exclude,crowding,12,8,excluded,review: exclude (crowding)
+87190,Michigan,2013,17,sn3,15,dt4,exclude,target number,10,9,excluded,review: exclude (target number)
+87191,Michigan,2013,17,sn2,20,dt4,exclude,target number,7,4,excluded,review: exclude (target number)
+87237,Michigan,2013,35,nn10,12.8,raw,include,,53,17,used,
+87239,Michigan,2013,35,nn11,5.4,raw,include,,190,83,used,
+87242,Michigan,2013,35,nn12,12,raw,exclude,target number,9,5,excluded,review: exclude (target number)
+87243,Michigan,2013,35,no5,7.9,raw,include,,68,31,used,
+88608,Michigan,2014,88,wn1,6,dt4,include,,26,6,used,
+88649,Michigan,2014,88,nn9,5,dt4,include,,18,12,used,
+89415,Michigan,2014,17,sn5,12,dt4,exclude,target number,0,0,excluded,review: exclude (target number)
+89416,Michigan,2014,17,sn5,25,dt4,exclude,target number,2,1,excluded,review: exclude (target number)
+89418,Michigan,2014,17,sn3,10,dt4,include,,108,67,used,
+89421,Michigan,2014,17,sn4,10,dt4,exclude,target number,9,7,excluded,review: exclude (target number)
+92784,Michigan,2015,88,sn1,5,dt4,exclude,target number,0,0,excluded,review: exclude (target number)
+92785,Michigan,2015,88,sn1,7,dt4,exclude,bottom detection,66,44,excluded,review: exclude (bottom detection)
+93781,Michigan,2015,17,nn3,19,dt4,include,,212,155,used,
+93784,Michigan,2015,17,nn2,10,dt4,include,,30,18,used,
+93790,Michigan,2015,17,sn3,20,dt4,include,,59,39,used,
+93794,Michigan,2015,17,sn2,15,dt4,include,,555,380,used,
+93796,Michigan,2015,17,nn0,15,dt4,include,,562,280,used,
+95458,Michigan,2016,88,no2,7.5,dt4,include,,289,199,used,
+95507,Michigan,2016,88,wn3,6,dt4,include,,14,11,used,
+95562,Michigan,2016,88,wn1,6,dt4,exclude,target number,4,3,excluded,review: exclude (target number)
+95625,Michigan,2016,88,nne1,13.5,dt4,include,,155,66,used,
+96306,Michigan,2016,17,sn5,24,dt4,include,,315,162,used,
+96313,Michigan,2016,17,so3,18,dt4,include,,889,635,used,
+96319,Michigan,2016,17,no1,20,dt4,include,,45,42,used,
+104077,Michigan,2017,88,wn3,15,dt4,include,,17,8,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02; bloaterTS config/set_aside.csv, 2026-10-20: deep tows read TS high, TS rising with range within tows, off-axis over-correction; mechanism unknown)"
+104090,Michigan,2017,88,so7,13,dt4,exclude,target number,6,5,excluded,review: exclude (target number)
+104126,Michigan,2017,88,so2,6.5,dt4,include,,35,29,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02; bloaterTS config/set_aside.csv, 2026-10-20: deep tows read TS high, TS rising with range within tows, off-axis over-correction; mechanism unknown)"
+104128,Michigan,2017,88,so2,16,dt4,include,,28,20,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02; bloaterTS config/set_aside.csv, 2026-10-20: deep tows read TS high, TS rising with range within tows, off-axis over-correction; mechanism unknown)"
+104141,Michigan,2017,88,so3,5,dt4,include,,176,159,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02; bloaterTS config/set_aside.csv, 2026-10-20: deep tows read TS high, TS rising with range within tows, off-axis over-correction; mechanism unknown)"
+104154,Michigan,2017,88,so1,11.5,dt4,include,,488,271,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02; bloaterTS config/set_aside.csv, 2026-10-20: deep tows read TS high, TS rising with range within tows, off-axis over-correction; mechanism unknown)"
+104178,Michigan,2017,88,sn1,5.1,dt4,include,,119,53,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02; bloaterTS config/set_aside.csv, 2026-10-20: deep tows read TS high, TS rising with range within tows, off-axis over-correction; mechanism unknown)"
+104180,Michigan,2017,88,sn1,7.6,dt4,exclude,target number,5,4,excluded,review: exclude (target number)
+105050,Michigan,2017,17,sn5,24,dt4,include,,425,156,used,
+105053,Michigan,2017,17,sn3,11.2,dt4,include,,435,288,used,
+105054,Michigan,2017,17,sn3,19.5,dt4,include,,1140,759,used,
+106243,Michigan,2018,35,nn3,5.7,raw,exclude,target number,6,5,excluded,review: exclude (target number)
+106246,Michigan,2018,35,no3,13.4,raw,include,,110,79,used,
+106360,Michigan,2018,88,wn3,6,dt4,include,,23,16,used,
+106368,Michigan,2018,88,so6,10.2,dt4,include,,14,12,used,
+106378,Michigan,2018,88,wn2,9.3,dt4,include,,24,13,used,
+106387,Michigan,2018,88,so4,14.3,dt4,exclude,target number,0,0,excluded,review: exclude (target number)
+106396,Michigan,2018,88,so2,9.3,dt4,exclude,target number,2,2,excluded,review: exclude (target number)
+106397,Michigan,2018,88,so2,6.1,dt4,include,,53,47,used,
+106402,Michigan,2018,88,wn1,10.1,dt4,exclude,crowding,25,17,excluded,review: exclude (crowding)
+106403,Michigan,2018,88,wn1,5.1,dt4,include,,14,11,used,
+106415,Michigan,2018,88,sn1,5.2,dt4,include,,53,28,used,
+106431,Michigan,2018,88,so1,10.5,dt4,include,,19,14,used,
+106432,Michigan,2018,88,so1,10.3,dt4,include,,70,52,used,
+107718,Michigan,2018,17,no1,13,dt4,exclude,target number,3,3,excluded,review: exclude (target number)
+107719,Michigan,2018,17,nn1,10,dt4,exclude,large targets,43,25,excluded,review: exclude (large targets)
+107720,Michigan,2018,17,so5,11,dt4,include,,11,9,used,
+107723,Michigan,2018,17,sn5,6,dt4,exclude,target number,,,excluded,review: exclude (target number)
+107724,Michigan,2018,17,sn4,25,dt4,include,,13,4,used,
+111192,Michigan,2019,88,sn1,5,dt4,include,,33,17,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+111212,Michigan,2019,88,wn1,10.5,dt4,include,,10,5,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+111221,Michigan,2019,88,so2,10.9,dt4,exclude,target number,7,4,excluded,review: exclude (target number)
+111226,Michigan,2019,88,wn2,7.6,dt4,include,,41,23,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+111238,Michigan,2019,88,so4,9.4,dt4,exclude,target number,3,3,excluded,review: exclude (target number)
+111250,Michigan,2019,88,no2,8.3,dt4,exclude,target number,7,7,excluded,review: exclude (target number)
+111259,Michigan,2019,88,wn4,7.4,dt4,exclude,target number,0,0,excluded,review: exclude (target number)
+111288,Michigan,2019,88,no4,13,dt4,exclude,target number,2,1,excluded,review: exclude (target number)
+111301,Michigan,2019,88,nn7,13.1,dt4,include,,320,116,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+112423,Michigan,2019,17,sn2,10.6,dt4,include,,17,9,used,
+112427,Michigan,2019,17,nn1,5.7,dt4,exclude,tow timing/coverage,6,5,excluded,review: exclude (tow timing/coverage)
+112428,Michigan,2019,17,sn5,9.6,dt4,exclude,target number,7,6,excluded,review: exclude (target number)
+112430,Michigan,2019,17,nn3,17,dt4,include,,10,8,used,
+112431,Michigan,2019,17,nn5,31.6,dt4,include,,121,108,used,
+118403,Michigan,2021,88,sn2,6,dt4,include,,1391,670,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+118404,Michigan,2021,88,sn2,28.8,dt4,include,,26,8,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+118492,Michigan,2021,88,no1,14.1,dt4,include,,44,23,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+119389,Michigan,2021,17,sn4,9,dt4,include,,919,599,used,
+119394,Michigan,2021,17,sn7,7,dt4,include,,201,124,used,
+119395,Michigan,2021,17,sn10,18,dt4,include,,78,28,used,
+119403,Michigan,2021,35,no2,8.2,raw,exclude,tow timing/coverage,74,73,excluded,review: exclude (tow timing/coverage)
+121420,Michigan,2022,88,wn3,6.9,raw,exclude,target number,7,3,excluded,review: exclude (target number)
+121469,Michigan,2022,88,wn1,16.9,raw,exclude,target number,0,0,excluded,review: exclude (target number)
+121696,Michigan,2022,17,nn1,20,dt4,include,,29,17,used,
+121697,Michigan,2022,17,sn7,13,dt4,include,,21,14,used,
+121701,Michigan,2022,17,sn4,10,dt4,include,,76,17,used,
+121708,Michigan,2022,17,nn2,10,dt4,exclude,bottom detection,76,40,excluded,review: exclude (bottom detection)
+122026,Michigan,2022,35,nn6,14.5,raw,include,,18,11,used,
+122027,Michigan,2022,35,nn6,6.7,raw,include,,29,26,used,
+122030,Michigan,2022,35,nn5,5.9,raw,include,,45,39,used,
+122033,Michigan,2022,35,nn4,5.5,raw,include,,55,38,used,
+124044,Michigan,2023,88,wn1,9.8,raw,include,,23,14,used,
+124048,Michigan,2023,88,wn2,10.6,raw,include,,377,154,used,
+124054,Michigan,2023,88,wn3,13.8,raw,include,,183,80,used,
+124159,Michigan,2023,35,nnw3,9.5,raw,include,,129,84,used,
+124165,Michigan,2023,35,nnw1,12.7,raw,include,,92,56,used,
+124168,Michigan,2023,35,no3,9.8,raw,include,,232,213,used,
+124774,Michigan,2023,17,sn2,6,dt4,include,,91,55,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+127534,Michigan,2024,35,nnw1,15.8,raw,include,,27,12,used,
+127535,Michigan,2024,35,nnw1,29.6,raw,include,,129,58,used,
+127540,Michigan,2024,35,no4,7.7,raw,include,,82,74,used,
+127542,Michigan,2024,35,nnw4,7.3,raw,include,,60,36,used,
+127576,Michigan,2024,17,nne4,12,dt4,include,,91,32,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+127581,Michigan,2024,17,sn4,7,dt4,exclude,large targets,140,76,excluded,review: exclude (large targets)
+127588,Michigan,2024,17,sn1,8,dt4,include,,55,33,set aside,"set aside: transducer issue: T120P076 set aside as in bloaterTS (user, 2026-11-02)"
+57445,Michigan,2004,88,no1,15.1,dt4,include,,31,23,used,
+57447,Michigan,2004,88,so3,28.5,dt4,exclude,target number,2,1,excluded,review: exclude (target number)
+57448,Michigan,2004,88,so2,18.5,dt4,include,,214,83,used,
+58596,Michigan,2005,17,sn2,15.4,dt4,include,,379,148,used,
+58597,Michigan,2005,17,so2,16.4,dt4,include,,667,379,used,
+58604,Michigan,2005,17,nn1,10.6,dt4,include,,399,127,used,
+58614,Michigan,2005,17,nn6,17.7,dt4,include,,952,280,used,
+59339,Michigan,2006,88,wn3,9.8,dt4,include,,63,38,used,
+79137,Michigan,2009,17,sn4,51.8,dt4,exclude,tow timing/coverage,64,11,excluded,review: exclude (tow timing/coverage)
+81836,Michigan,2010,17,so2,14,dt4,exclude,bottom detection,334,297,excluded,review: exclude (bottom detection)
+81838,Michigan,2010,17,sn2,20.5,dt4,exclude,target number,7,2,excluded,review: exclude (target number)
+81839,Michigan,2010,17,so1,9.5,dt4,include,,410,333,used,
+81841,Michigan,2010,17,sn1,18,dt4,include,,656,265,used,
+81843,Michigan,2010,17,so4,22,dt4,exclude,large targets,224,188,excluded,review: exclude (large targets)
+81845,Michigan,2010,17,nn1,11.9,dt4,include,,177,49,used,
+81848,Michigan,2010,17,no4,21,dt4,include,,130,120,used,
+85064,Michigan,2012,88,so2,12,dt4,include,,416,221,used,
+86694,Michigan,2013,88,wn2,5,dt4,include,,42,30,used,
+89430,Michigan,2014,35,nn8,10,raw,exclude,other,45,18,excluded,review: exclude (other)
+122023,Michigan,2022,35,no3,14.8,raw,include,,95,78,used,
+124167,Michigan,2023,35,no3,9,raw,include,,466,403,used,

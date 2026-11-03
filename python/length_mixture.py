@@ -20,6 +20,8 @@ from project import Project
 # the user's choice, 2026-11-03 (119389 given as 119289, which is not a used tow)
 TOWS = [106432, 106431, 124044, 112431, 89418, 127535, 93784, 105054, 81845, 58070, 58066, 119389, 81764]
 MIN_SD = 2.0      # mm; keeps a component from collapsing onto one length
+# tows whose two groups come from a 3-group fit with the largest group (a stray fish) left out (user, 2026-11-03)
+THREE_DROP_LARGEST = {119389}
 
 
 def em(x, w, k, starts=20, seed=0):
@@ -75,7 +77,12 @@ def main(ops):
             fits[k] = em(x, w, k)
             bic[k] = -2 * fits[k][0] + (3 * k - 1) * np.log(n)
         ll, pi, mu, sd = fits[2]
-        rows.append(dict(OP_ID=op, n_measured=int(n), p_small=pi[0], mean_small=mu[0], sd_small=sd[0],
+        if op in THREE_DROP_LARGEST:
+            _, pi3, mu3, sd3 = fits[3]
+            pi, mu, sd = pi3[:2], mu3[:2], sd3[:2]
+            n = n * pi.sum()
+            pi = pi / pi.sum()
+        rows.append(dict(OP_ID=op, n_measured=int(round(n)), groups_from="3 groups, largest dropped" if op in THREE_DROP_LARGEST else "2 groups", p_small=pi[0], mean_small=mu[0], sd_small=sd[0],
                          p_large=pi[1], mean_large=mu[1], sd_large=sd[1], ratio=mu[1] / mu[0],
                          n_small=pi[0] * n, n_large=pi[1] * n, bic1=bic.get(1), bic2=bic.get(2), bic3=bic.get(3)))
         ax.hist(x, bins=np.arange(15, 215, 5), weights=w, color="tab:green", alpha=0.6)

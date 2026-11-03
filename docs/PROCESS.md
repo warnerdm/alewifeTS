@@ -98,5 +98,5 @@ targets used, 129 used tows.
   fish (tracks >= 4 targets, deviations from the track mean scaled by sqrt(n/(n-1)) for track length; user), and
   `tow_track_summary.csv`. Median share of targets in tracks 0.64, 2 targets per fish; per-fish minus per-detection mean
   TS +0.28 dB (large only in tows with few fish).
-- Open (user): 58614 and 85064 show two per-fish TS modes (about -58 and -50 dB) while the catch is one group of small
-  alewife (58614: 42-71 mm); the caught fish are near the upper mode by Warner et al. (2002), a 70 kHz relation.
+- 58614 and 85064 show two per-fish TS modes (about -58 and -50 dB) while the catch is one group of small
+  alewife (58614: 42-71 mm); the caught fish are near the upper mode by Warner et al. (2002), a 70 kHz relation. Settled (user, 2026-11-03): "they are what they are"; both tows stay as they are, no change.

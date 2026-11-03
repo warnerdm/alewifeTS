@@ -25,7 +25,8 @@ fit <- function(x, y, label) {
 }
 sets <- list("all 117" = d, ">= 75% in 58-159 mm" = filter(d, share_in_range >= 0.75),
              ">= 90% in 58-159 mm" = filter(d, share_in_range >= 0.90))
-res <- imap_dfr(sets, function(x, nm) bind_rows(fit(x, "mean_ts_60", nm), fit(x, "mean_ts_corrected", nm)))
+res <- imap_dfr(sets, function(x, nm) bind_rows(fit(x, "mean_ts_60", nm), fit(x, "mean_ts_corrected", nm),
+                                             fit(x, "mean_ts_corrected_unimodal_small", nm)))
 write_csv(res, here("data", "derived", "catch_based", "catch_based_models.csv"))
 print(res %>% mutate(across(where(is.double), ~ round(.x, 2))), width = 200)
 

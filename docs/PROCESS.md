@@ -152,6 +152,9 @@ targets >= -50 dB plus that share. No trawl selectivity correction; the curve co
 their alewife in that range). 117 tows: slope 15.3 (13.8-16.7), R2m 0.82, residual SD 1.37 dB (vs 13.0, 0.66, 1.75 at
 -60 dB); tows >= 90% in range: 17.2 (13.0-21.5). Partly circular: the share kept depends on their mode-length equation,
 so the tighter fit is partly built in.
+Extrapolation below 58 mm (user: no way to limit sizes to 58-159 mm): sensitivity with only the curve's main peak for
+length groups < 58 mm (smaller fish may be more unimodal): small-tow TS +0.2 dB (max +0.56), slope 14.8 (13.4-16.3) vs 15.3;
+the extrapolated curve shape matters little.
 
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 

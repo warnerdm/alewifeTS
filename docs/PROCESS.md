@@ -44,7 +44,9 @@ targets set the median). Nothing shallower than 5 m is tracked. 50 regions in 32
 
 Region mean Sv with background noise removed, bottom line (Maximum Sv), Nv, and single targets (Echoview split-beam
 method 2, Great Lakes SOP, TS_comp -60 to -30 dB; minimum normalized pulse length 0.5 for Simrad power data), with the
-bad-data regions excluded. 204 of 211 tows ok.
+bad-data regions excluded. 204 of 211 tows ok. The committed outputs of steps 01-05 are those of the full rerun by
+the step scripts at pydt4 07d57ce (2026-11-02; `data/derived/run_log.csv`); it reproduced steps 01-04 exactly and gave
+24 dt4 tows pydt4's later dt4 ping timing (0-1 edge ping, mean Sv <= 0.022 dB).
 
 ## 6-7. Echograms and review page
 
@@ -61,8 +63,8 @@ crowding 2, other 2. The user's free-text reasons are kept in the notes.
 ## 8. Tow selection
 
 `data/derived/tow_selection.csv`. T120P076 vessel-years (Sturgeon 2017, 2019, 2021; Steelhead 2023, 2024) are set aside
-as in bloaterTS (user, 2026-11-02; `config/set_aside.csv`): 16 tows. Used: 129 tows (106 dt4, 23 raw), 25,216 targets,
-14,384 fish (gap-0 tracks holding a target used + untracked targets). No count threshold here: it is an analysis
+as in bloaterTS (user, 2026-11-02; `config/set_aside.csv`): 16 tows. Used: 129 tows (106 dt4, 23 raw), 25,214 targets,
+14,382 fish (gap-0 tracks holding a target used + untracked targets). No count threshold here: it is an analysis
 choice.
 
 ## 9. Copies of the acoustic files

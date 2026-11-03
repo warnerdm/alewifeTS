@@ -1,0 +1,39 @@
+# alewifeTS project settings, read by scripts/_project.py. Paths are relative to the project root unless absolute.
+
+# pydt4 (the processing code; D:\pyprojects\pydt4, github.com/warnerdm/pydt4). Each step records the pydt4 commit it ran
+# with in data/derived/run_log.csv.
+pydt4: D:/pyprojects/pydt4
+
+# acoustic archive (read only). Tow matching searches it; the used tows' files are copied into data/raw/acoustic (step 09)
+acoustic_root: D:/Acoustics/Michigan/acoustic
+acoustic_copies_dir: data/raw/acoustic
+
+# calibration table (pydt4's single master copy; Simrad calibrations are pydt4 tow_echograms.SIMRAD_CAL)
+ecs_csv: D:/pyprojects/pydt4/data/ecs_parameters_usgs_steelhead.csv
+
+# tow list (R/create_mwt_location_list_for_python.R) and the run list made from it (step 01)
+tow_list: data/raw/LM_tow_list_2005_2024.csv
+run_list: data/derived/LM_tow_list_alewife_run.csv
+trawl_dir: data/raw/trawl
+
+# run list exclusions (user, 2026-11-01)
+min_fishing_depth_m: 5.0               # FISHING_DEPTH < 5 m excluded; 5.0 kept
+exclude_vessel_years:                  # [vessel, year, reason]
+  - [17, 2004, "Steelhead 2004: dual-beam"]
+  - [35, 2016, "Baird 2016: no calibration session"]
+  - [35, 2017, "Baird 2017: no calibration session"]
+
+# per-project pydt4 inputs
+start_corrections: config/tow_start_corrections.csv
+bad_data_regions: config/bad_data_regions/regions.csv
+
+# whole-column single targets for fish tracking (user, 2026-11-01): from 5 m below the surface to the bottom line,
+# TS_comp >= -60 dB, no -30 dB ceiling
+whole_column_min_depth_m: 5.0
+# gap-0 fish tracks (bloaterTS's settings)
+track_max_gap: 0
+track_min_targets: 2
+track_min_pings: 2
+
+# outputs
+derived_dir: data/derived

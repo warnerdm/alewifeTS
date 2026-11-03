@@ -89,6 +89,14 @@ a few minutes earlier (three passive files after the tow are not copies). The re
 hold project-relative paths; the review page and tow selection rebuilt from it are unchanged (page: 80756's echogram
 only).
 
+## 10. Analysis tows (`R/create-tow-sizes.R`, `R/create-tow-ts.R`, `R/create-analysis-tows.R`)
+
+Per used tow: alewife mean length (mm), its SD / SE, number measured, mean weight (catch weight / catch N; missing for
+76956, 76957, 76959, no catch weight) from the trawl files; mean TS (mean sigma_bs of the tow run's single targets, in dB)
+and the number of targets. Tow rule as bloaterTS (user, 2026-11-03): >= 10 targets, >= 5 alewife measured, relative SE
+of the mean length <= 10%. 121 of the 129 used tows kept; 8 fail the length SE (mixed small and large alewife: 58062,
+89418, 93784, 95507, 106403, 112431, 119389, 119394). `data/derived/analysis_tows.csv` (column `analysis`).
+
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 
 As bloaterTS's fish-track experiment (`echoview/experiments/fish_tracks_all_gap0/`), from pydt4's gap-0 tracks of the

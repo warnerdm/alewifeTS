@@ -27,6 +27,8 @@ time, pydt4 commit).
 | `scripts/07_review_page.py` | - | steps 02-06, trawl catch | `review/tow_review.html` |
 | reviewer | a browser | `review/tow_review.html` | `config/tow_review.csv` (include / exclude, reason) |
 | `scripts/08_tow_selection.py` | - | `config/tow_review.csv`, `config/set_aside.csv`, step 05 | `data/derived/tow_selection.csv` |
+| `R/create-tow-sizes.R` | R | step 08, `data/raw/trawl/` | `data/derived/tow_sizes.csv`, `tow_lengths.csv` (alewife length and weight per used tow) |
+| `R/create-tow-ts.R` | R | step 08, step 05 | `data/derived/tow_ts.csv`, `tow_targets.csv` (mean TS per used tow) |
 | `python/within_fish.py data/derived/within_fish` | - | step 08, tracks | within-fish TS figures and tables (exploratory) |
 | `python/track_summary.py data/derived/track_summary` | - | step 08, tracks, step 05 | per-tow track figures, `tow_track_summary.csv` (exploratory) |
 | analysis, figures, tables (to do) | - | `data/derived/`, `data/raw/trawl/` | `manuscript/` |

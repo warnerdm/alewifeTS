@@ -21,3 +21,4 @@ step,time,pydt4_commit,pydt4_uncommitted_changes,note
 06_echograms,2026-11-03T11:14:04,bef03d4,True,"op_ids=[58039, 58054, 58059, 58062, 58066, 58067, 58070, 58073, 58083, 58088, 58090, 58095, 58100, 58102, 58104, 58109, 58111, 58113, 58117] from the copies"
 08_tow_selection,2026-11-03T11:14:39,bef03d4,True,""
 07_review_page,2026-11-03T11:27:53,bef03d4,True,""
+10_ts_floor_run,2026-11-03T12:12:29,c59d9de,False,"129 tows, detection -77.0 dB from the copies"

@@ -97,6 +97,18 @@ and the number of targets. Tow rule as bloaterTS (user, 2026-11-03): >= 10 targe
 of the mean length <= 10%. 121 of the 129 used tows kept; 8 fail the length SE (mixed small and large alewife: 58062,
 89418, 93784, 95507, 106403, 112431, 119389, 119394). `data/derived/analysis_tows.csv` (column `analysis`).
 
+## 11. TS-length model and TS floor (2026-11-03)
+
+`R/ts-length-model.R`: tow mean TS on LogL = log10(mean length, cm), lmer by ML with a calibration-unit (vessel-year)
+intercept, as bloaterTS. 121 tows, 35 units: TS = 11.42 LogL - 58.77 (slope 95% CI 9.1-13.7), marginal R2 0.47; slope 20
+fits much worse (b20 = -66.7 dB, LRT p = 1e-11). The user expected a very different slope. Outlier tows (TS or length
+clearly wrong) are to be removed even if the slope barely changes (user; after the floor check).
+TS floor (`scripts/10_ts_floor_run.py`, `R/ts-floor-models.R`): the 129 used tows rerun with detection down to -77 dB;
+the -60 dB subset equals step 05 in all 121 analysis tows (same targets, mean TS within 1e-14 dB). Slope at floors -60 / -63
+/ -66 / -70 / -77 dB: 11.4 / 10.3 / 9.3 / 7.5 / 4.7 (R2m 0.47 to 0.06). A lower floor flattens the line further: the weak
+targets it adds pull the large-fish tows down more than the small-fish tows, so truncation of small alewife at -60 dB does
+not explain the low slope.
+
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 
 As bloaterTS's fish-track experiment (`echoview/experiments/fish_tracks_all_gap0/`), from pydt4's gap-0 tracks of the

@@ -126,6 +126,21 @@ floor up to -50 dB, no plateau). Tracked targets only (`python/tracked_ts.py`, `
 track nearly as often as alewife-size ones (-60 to -55 dB: 60% in tracks; >= -50 dB: 73%), so the slope barely moves
 (13.0 all, 13.2 tracked, 13.6 per fish) and adults stay about 4 dB below Warner.
 
+## 13. Brooking and Rudstam (2009) and a mixture fit (exploratory, 2026-11-03)
+
+Brooking and Rudstam (2009, TAFS 138:471-486; user's copy D:/journal_articles): ex situ (net-cage, 70 kHz) alewife mean
+TS = 13.1 log10 L - 58.2 (the same slope as our 13.05), mode = 19.1 log10 L - 62.2; alewife TS distributions span ~25 dB,
+negatively skewed; Warner et al. (2002) assumed unimodal normal distributions, which leaves out the low tail. Their field
+surveys also had excess -61 to -50 dB targets. Their PDF of TS - TS_mode reproduces their Figure 5 only with a plus before
+the skew term (printed minus; k = 0.57, the curve-2 skewness constant); negative values above +3.3 dB set to 0.
+Variant B (`python/brooking_fit.py`: curve fitted to targets >= -50 dB) fails here: the -50 to -40 dB range holds a flat
+spread of non-alewife targets. Mixture (`python/mixture_fit.py`: Brooking shape for alewife + skew-normal weak group,
+-77 to -30 dB, ML): fitted alewife modes follow Brooking's mode equation. 117 tows: 11 fits put the alewife component in
+the weak group (mostly small-fish tows, where the groups overlap); 66 tows with >= 20 alewife targets, a sound weak fit and
+mode > -55 dB: mode = 18.6 LogL - 60.7 (slope 95% CI 16.5-20.7, R2m 0.83; lmer, calibration-unit intercept). Removing
+fits by their mode is a cut on the response, so that subset is only indicative. The mean of the alewife component is the
+mode shifted by a constant set by Brooking's shape.
+
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 
 As bloaterTS's fish-track experiment (`echoview/experiments/fish_tracks_all_gap0/`), from pydt4's gap-0 tracks of the

@@ -27,6 +27,8 @@ time, pydt4 commit).
 | reviewer | a browser | `review/tow_review.html` | `config/tow_review.csv` (include / exclude, reason) |
 | `scripts/08_tow_selection.py` | - | `config/tow_review.csv`, `config/set_aside.csv`, step 05 | `data/derived/tow_selection.csv` |
 | `scripts/09_copy_tow_files.py` | acoustic archive | step 08, step 05 | `data/raw/acoustic/` (used tows' files) |
+| `python/within_fish.py data/derived/within_fish` | - | step 08, tracks | within-fish TS figures and tables (exploratory) |
+| `python/track_summary.py data/derived/track_summary` | - | step 08, tracks, step 05 | per-tow track figures, `tow_track_summary.csv` (exploratory) |
 | analysis, figures, tables (to do) | - | `data/derived/`, `data/raw/trawl/` | `manuscript/` |
 
 Words used here: the **run list** is the tow list after the exclusions; a **run** is one pass of pydt4 over the run
@@ -64,8 +66,9 @@ Edit `config/project.yaml` if pydt4 or the acoustic archive is somewhere else.
 
 ## Not yet self-contained
 
-- The steps that read acoustic data search the archive (`acoustic_root`); they do not yet read the copies in
-  `data/raw/acoustic/`.
+- With `--from-copies` (steps 02, 05, 06) the used tows run from the copies in `data/raw/acoustic/`, without the
+  archive; checked 2026-11-02: identical results, targets, tracks and regions for all 129 used tows. Only the used tows
+  are copied (user), so the excluded tows, the review page (step 07) and the exclusion evidence still need the archive.
 - Calibration values (pydt4 `data/ecs_parameters_usgs_steelhead.csv`, `tow_echograms.SIMRAD_CAL`), transducer depths,
   clock offsets and whitelisted matches live in pydt4.
 - Output tables hold absolute paths to the archive (`files_used`, `st_csv`).

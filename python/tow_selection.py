@@ -20,27 +20,35 @@ TARGETS = os.path.join(ROOT, "data", "derived", "tow_single_targets")
 TRACKED = os.path.join(ROOT, "data", "derived", "whole_column", "tracks", "targets")
 RESULTS = os.path.join(ROOT, "data", "derived", "tow_results.csv")
 TOW_LIST = os.path.join(ROOT, "data", "derived", "LM_tow_list_alewife_run.csv")
-KEY = ["file", "ping_index_in_file", "r"]
+
+
+def targets_with_track(op_id):
+    """The tow's targets used (all columns of its tow_single_targets file) with the gap-0 track each belongs to:
+    track >= 0, -1 = in no track, NaN = not found in the tracking run. None if the tow has no targets file."""
+    f = os.path.join(TARGETS, f"{op_id}_single_targets.csv")
+    if not os.path.exists(f):
+        return None
+    u = pd.read_csv(f)
+    t = os.path.join(TRACKED, f"{op_id}_tracked.csv")
+    if u.empty or not os.path.exists(t):
+        return u.assign(track=float("nan"))
+    tr = pd.read_csv(t, usecols=["file", "ping_index_in_file", "Target_range", "track"])
+    name = lambda s: s.map(lambda p: p.replace("\\", "/").rsplit("/", 1)[-1])   # the runs write / and \ differently
+    u["_f"], tr["_f"] = name(u.file), name(tr.file)
+    u["_r"], tr["_r"] = u.Target_range.round(3), tr.Target_range.round(3)
+    k = ["_f", "ping_index_in_file", "_r"]
+    return u.merge(tr[k + ["track"]].drop_duplicates(k), on=k, how="left").drop(columns=["_f", "_r"])
 
 
 def fish_count(op_id):
     """(targets used, fish, targets used not found in the tracking run) for one tow; None if it has no targets file."""
-    f = os.path.join(TARGETS, f"{op_id}_single_targets.csv")
-    if not os.path.exists(f):
+    m = targets_with_track(op_id)
+    if m is None:
         return None
-    u = pd.read_csv(f, usecols=["file", "ping_index_in_file", "Target_range"])
-    if u.empty:
+    if m.empty:
         return 0, 0, 0
-    t = os.path.join(TRACKED, f"{op_id}_tracked.csv")
-    if not os.path.exists(t):
-        return len(u), len(u), len(u)
-    tr = pd.read_csv(t, usecols=["file", "ping_index_in_file", "Target_range", "track"])
-    for d in (u, tr):
-        d["file"] = d.file.map(lambda p: p.replace("\\", "/").rsplit("/", 1)[-1])   # the runs write / and \ differently
-        d["r"] = d.Target_range.round(3)
-    m = u.merge(tr[KEY + ["track"]].drop_duplicates(KEY), on=KEY, how="left")
     tracked = m.track.notna() & (m.track >= 0)
-    return len(u), m.loc[tracked, "track"].nunique() + int((~tracked).sum()), int(m.track.isna().sum())
+    return len(m), m.loc[tracked, "track"].nunique() + int((~tracked).sum()), int(m.track.isna().sum())
 
 
 def main():

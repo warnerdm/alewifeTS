@@ -70,3 +70,22 @@ choice.
 ## 9. Copies of the acoustic files
 
 The 129 used tows' files (672, 16.2 GB) are in `data/raw/acoustic/` (user, 2026-11-02: used tows only).
+`--from-copies` runs steps 02, 05 and 06 from them (pydt4 `--file-list`); for the 129 used tows that gives the same
+results, targets, tracks and regions as the archive run (checked 2026-11-02). Unlike bloaterTS, which copies every ok
+tow, the excluded tows are not copied, so the review (step 07) still needs the archive.
+
+## Exploratory: tracks and within-fish TS (2026-11-02)
+
+As bloaterTS's fish-track experiment (`echoview/experiments/fish_tracks_all_gap0/`), from pydt4's gap-0 tracks of the
+targets used, 129 used tows.
+- `python/within_fish.py` -> `data/derived/within_fish/`. Deviation = TS_comp minus the track median (dB), tracks of >= 5
+  targets used, median target dropped in odd tracks (as bloaterTS). Tows with >= 5 such fish (bloaterTS 20); one group,
+  since no alewife tow is deep (user); dip test only in tows with >= 20 fish. 34 tows, 535 fish, 3,078 deviations:
+  unimodality not rejected in any of the 9 tested tows (p >= 0.95); pooled SD 3.2 dB (robust 1.45 dB; heavy tails),
+  flat with off-axis angle. User: alewife can have a wider within-fish TS distribution ex situ.
+- `python/track_summary.py` -> `data/derived/track_summary/`: per tow, targets used per detection / per fish / within
+  fish (tracks >= 4 targets, deviations from the track mean scaled by sqrt(n/(n-1)) for track length; user), and
+  `tow_track_summary.csv`. Median share of targets in tracks 0.64, 2 targets per fish; per-fish minus per-detection mean
+  TS +0.28 dB (large only in tows with few fish).
+- Open (user): 58614 and 85064 show two per-fish TS modes (about -58 and -50 dB) while the catch is one group of small
+  alewife (58614: 42-71 mm); the caught fish are near the upper mode by Warner et al. (2002), a 70 kHz relation.

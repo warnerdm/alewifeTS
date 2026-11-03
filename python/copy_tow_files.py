@@ -6,7 +6,8 @@ as bloaterTS scripts/03_copy_tow_files.py (user, 2026-11-02: the 129 used tows o
 The files are those the tow run used (data/derived/tow_results.csv, files_used). The archive is only read. Each file
 is hashed (SHA-256) as it is read and the copy is hashed again; the two must agree. data/raw/acoustic/tow_files.csv
 (committed; the copies are git-ignored): OP_ID, source_path, size_bytes, copy_path (relative to the project root),
-sha256. A file used by two tows is copied once. Rerunning skips files whose copy exists with the recorded size and hash.
+sha256, match_level, entry_gap_s (the archive match, as the tow run recorded it). The steps read it with
+--from-copies (pydt4 tow_matching.load_file_list) to run from the copies instead of the archive. A file used by two tows is copied once. Rerunning skips files whose copy exists with the recorded size and hash.
 
     python python/copy_tow_files.py      (alewifeTS root; echopype env)
 """
@@ -58,7 +59,8 @@ def file_list():
             dest = os.path.join(COPIES, str(t.year), VESSEL_NAMES[int(t.vessel)], str(t.transect).lower(),
                                 os.path.basename(src))
             rows.append({"OP_ID": int(r.OP_ID), "source_path": src, "size_bytes": os.path.getsize(src),
-                         "copy_path": os.path.relpath(dest, ROOT)})
+                         "copy_path": os.path.relpath(dest, ROOT), "match_level": r.match_level,
+                         "entry_gap_s": r.entry_gap_s})
     return pd.DataFrame(rows)
 
 
@@ -66,7 +68,7 @@ def main():
     files = file_list()
     old = pd.read_csv(FILES_CSV, dtype={"sha256": str}) if os.path.exists(FILES_CSV) else pd.DataFrame(columns=["copy_path", "sha256"])
     known = dict(zip(old.copy_path, old.sha256))
-    files["sha256"] = ""
+    files.insert(4, "sha256", "")
     done = {}                      # copy_path -> (source path, sha256), this run
     n_copied = n_skipped = 0
     for k, i in enumerate(files.index, 1):

@@ -143,6 +143,16 @@ the catch, `R/create-tow-sizes.R`) instead of mean length (`R/mixture-mode-model
 (66 tows: 17.4 vs 18.6), R2m 0.77 vs 0.83, mode at 10 cm the same (-42.1 dB); mean length fits slightly better. The mean of the alewife component is the
 mode shifted by a constant set by Brooking's shape.
 
+## 14. Catch-based correction of Brooking and Rudstam (2009) (exploratory, 2026-11-03)
+
+`python/catch_based.py`, `R/catch-based-model.R` (user): for each model tow, their curve placed at each 5-mm length
+group's mode (19.1 log10 L - 62.2), weighted by the catch, summed, scaled to the observed targets from -50 to -30 dB; its
+count from -60 to -50 dB sets the share of those targets kept as alewife (median 0.24); tow TS = mean sigma_bs of the
+targets >= -50 dB plus that share. No trawl selectivity correction; the curve covers 58-159 mm (37 tows have >= 90% of
+their alewife in that range). 117 tows: slope 15.3 (13.8-16.7), R2m 0.82, residual SD 1.37 dB (vs 13.0, 0.66, 1.75 at
+-60 dB); tows >= 90% in range: 17.2 (13.0-21.5). Partly circular: the share kept depends on their mode-length equation,
+so the tighter fit is partly built in.
+
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 
 As bloaterTS's fish-track experiment (`echoview/experiments/fish_tracks_all_gap0/`), from pydt4's gap-0 tracks of the

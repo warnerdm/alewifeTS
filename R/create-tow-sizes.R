@@ -37,6 +37,15 @@ sizes <- lf %>%
   mutate(se_length = sd_length / sqrt(n_measured),
          rel_se = se_length / Length)
 
+# modal length: the midpoint of the most common 5-mm length bin (ties: the shorter bin), for comparisons with TS modes
+modal <- lf %>%
+  mutate(bin = floor(LENGTH / 5) * 5 + 2.5) %>%
+  summarise(.by = c(OP_ID, bin), N = sum(N)) %>%
+  arrange(OP_ID, desc(N), bin) %>%
+  distinct(OP_ID, .keep_all = TRUE) %>%
+  select(OP_ID, modal_length = bin)
+sizes <- sizes %>% left_join(modal, by = "OP_ID")
+
 tow_sizes <- used %>%
   left_join(sizes, by = "OP_ID") %>%
   left_join(alewife_catch, by = "OP_ID") %>%

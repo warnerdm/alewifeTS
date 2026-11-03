@@ -138,7 +138,9 @@ spread of non-alewife targets. Mixture (`python/mixture_fit.py`: Brooking shape 
 -77 to -30 dB, ML): fitted alewife modes follow Brooking's mode equation. 117 tows: 11 fits put the alewife component in
 the weak group (mostly small-fish tows, where the groups overlap); 66 tows with >= 20 alewife targets, a sound weak fit and
 mode > -55 dB: mode = 18.6 LogL - 60.7 (slope 95% CI 16.5-20.7, R2m 0.83; lmer, calibration-unit intercept). Removing
-fits by their mode is a cut on the response, so that subset is only indicative. The mean of the alewife component is the
+fits by their mode is a cut on the response, so that subset is only indicative. Modal length (most common 5-mm bin of
+the catch, `R/create-tow-sizes.R`) instead of mean length (`R/mixture-mode-models.R`, user 2026-11-03): slopes 1-2 lower
+(66 tows: 17.4 vs 18.6), R2m 0.77 vs 0.83, mode at 10 cm the same (-42.1 dB); mean length fits slightly better. The mean of the alewife component is the
 mode shifted by a constant set by Brooking's shape.
 
 ## Exploratory: tracks and within-fish TS (2026-11-02)

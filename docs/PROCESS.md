@@ -103,6 +103,11 @@ of the mean length <= 10%. 121 of the 129 used tows kept; 8 fail the length SE (
 intercept, as bloaterTS. 121 tows, 35 units: TS = 11.42 LogL - 58.77 (slope 95% CI 9.1-13.7), marginal R2 0.47; slope 20
 fits much worse (b20 = -66.7 dB, LRT p = 1e-11). The user expected a very different slope. Outlier tows (TS or length
 clearly wrong) are to be removed even if the slope barely changes (user; after the floor check).
+Outliers (user, 2026-11-03): fit on all 121, drop tows with |scaled residual| > 2.5 once, refit; Cook's distance
+(4/n) reported as an influence check (`data/derived/ts_length_outliers.csv`). Dropped: 76952, 78785, 106432 (adult
+alewife catch, targets near the -60 dB floor) and 107724 (small alewife, 13 targets near -38 dB); Cook's also flags
+124159 (1.7 SD, kept). 117 tows: TS = 13.05 LogL - 60.19 (slope 95% CI 11.3-14.8), R2m 0.66, R2c 0.75, residual SD
+1.75 dB, calibration-unit SD 1.05 dB; slope 20 still fits much worse (b20 = -66.7 dB, LRT p = 4e-12).
 TS floor (`scripts/10_ts_floor_run.py`, `R/ts-floor-models.R`): the 129 used tows rerun with detection down to -77 dB;
 the -60 dB subset equals step 05 in all 121 analysis tows (same targets, mean TS within 1e-14 dB). Slope at floors -60 / -63
 / -66 / -70 / -77 dB: 11.4 / 10.3 / 9.3 / 7.5 / 4.7 (R2m 0.47 to 0.06). A lower floor flattens the line further: the weak

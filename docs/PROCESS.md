@@ -24,7 +24,11 @@ vessel-years: transducer depth, Simrad file clock, dt4 clock offset, Simrad cali
 a blank value = taken from each file) and `simrad_reports/` (the 8 EK80 calibration reports behind the Simrad values).
 Added for alewifeTS (user, 2026-11-01): Sturgeon 2004 = the Tobermory values (the Port Washington session was weak and
 ~0.5 dB off); Baird 2012 file values, 2013 ER60 utility values (psi from each file), 2021 EK80 calibration XML (transducer
-depth from the file, 3.0 m). Open: the Sturgeon 2005 row has no recorded source (16 tows use it).
+depth from the file, 3.0 m). Sturgeon 2005 (user, 2026-11-03): the old row (a 2018 ECS by Kristy, no recorded source) had angle offsets relative to the
+header entered as absolute (about 0.8 deg off on each axis). Replaced by pydt4's session on the sphere files the user named
+(2005/no2 20265498-20415109, 25 Aug 2005): TS -0.220, Sv 0.583, absolute offsets +0.755 minor / -0.866 major; beam widths
+kept from the old row (the session's off-axis coverage is poor). The 19 Sturgeon 2005 tows rerun: Sv +0.093 dB; the 8 used
+tows' mean TS -0.87 to +1.76 dB (median +0.2; 58088, 704 targets, +0.04); selection 25,125 targets, 14,343 fish.
 
 ## Tow matching and start times (in the tow runs)
 

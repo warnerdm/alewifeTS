@@ -1,22 +1,22 @@
 OP_ID,lake,year,vessel,transect,fishing_depth_m,acoustic_format,decision,reason,targets_used,fish,status,why
-58039,Michigan,2005,88,nn8,7.4,dt4,exclude,large targets,74,37,excluded,review: exclude (large targets)
-58054,Michigan,2005,88,nn11,23.4,dt4,exclude,target number,4,3,excluded,review: exclude (target number)
+58039,Michigan,2005,88,nn8,7.4,dt4,exclude,large targets,88,42,excluded,review: exclude (large targets)
+58054,Michigan,2005,88,nn11,23.4,dt4,exclude,target number,6,4,excluded,review: exclude (target number)
 58059,Michigan,2005,88,no4,23.1,dt4,exclude,target number,0,0,excluded,review: exclude (target number)
-58062,Michigan,2005,88,wn4,7.6,dt4,include,,14,11,used,
-58066,Michigan,2005,88,no2,20.7,dt4,include,,44,13,used,
-58067,Michigan,2005,88,no2,73.6,dt4,exclude,wrong habitat/depth,57,9,excluded,review: exclude (wrong habitat/depth)
-58070,Michigan,2005,88,no1,11.1,dt4,include,,294,215,used,
+58062,Michigan,2005,88,wn4,7.6,dt4,include,,15,13,used,
+58066,Michigan,2005,88,no2,20.7,dt4,include,,37,15,used,
+58067,Michigan,2005,88,no2,73.6,dt4,exclude,wrong habitat/depth,61,9,excluded,review: exclude (wrong habitat/depth)
+58070,Michigan,2005,88,no1,11.1,dt4,include,,260,197,used,
 58073,Michigan,2005,88,no1,20.6,dt4,exclude,target number,1,1,excluded,review: exclude (target number)
 58083,Michigan,2005,88,so5,14.2,dt4,exclude,target number,4,3,excluded,review: exclude (target number)
-58088,Michigan,2005,88,so5,13.2,dt4,include,,739,390,used,
-58090,Michigan,2005,88,so4,74.3,dt4,exclude,wrong habitat/depth,42,8,excluded,review: exclude (wrong habitat/depth)
-58095,Michigan,2005,88,so4,9.5,dt4,include,,82,68,used,
-58100,Michigan,2005,88,wn2,6.5,dt4,include,,104,83,used,
-58102,Michigan,2005,88,so3,16.6,dt4,exclude,large targets,154,117,excluded,review: exclude (large targets)
-58104,Michigan,2005,88,so3,60.4,dt4,exclude,target number,4,2,excluded,review: exclude (target number)
-58109,Michigan,2005,88,wn1,9.9,dt4,include,,20,17,used,
+58088,Michigan,2005,88,so5,13.2,dt4,include,,704,370,used,
+58090,Michigan,2005,88,so4,74.3,dt4,exclude,wrong habitat/depth,40,8,excluded,review: exclude (wrong habitat/depth)
+58095,Michigan,2005,88,so4,9.5,dt4,include,,64,53,used,
+58100,Michigan,2005,88,wn2,6.5,dt4,include,,92,77,used,
+58102,Michigan,2005,88,so3,16.6,dt4,exclude,large targets,142,114,excluded,review: exclude (large targets)
+58104,Michigan,2005,88,so3,60.4,dt4,exclude,target number,5,2,excluded,review: exclude (target number)
+58109,Michigan,2005,88,wn1,9.9,dt4,include,,22,19,used,
 58111,Michigan,2005,88,wn1,14.8,dt4,exclude,large targets,18,16,excluded,review: exclude (large targets)
-58113,Michigan,2005,88,so1,7.4,dt4,include,,123,113,used,
+58113,Michigan,2005,88,so1,7.4,dt4,include,,137,127,used,
 58117,Michigan,2005,88,so1,23.8,dt4,exclude,target number,0,0,excluded,review: exclude (target number)
 58592,Michigan,2005,17,sn1,8.8,dt4,include,,910,357,used,
 58595,Michigan,2005,17,sn2,5,dt4,include,,68,32,used,

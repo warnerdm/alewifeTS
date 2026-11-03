@@ -1,5 +1,5 @@
 OP_ID,region,start_time,end_time,depth_top_m,depth_bottom_m,masks,detections,ts_mean_db,reason,source
-58070,bad data 1,2005-08-27 02:39:06.5829,2005-08-27 02:39:12.5829,19.652,21.777,track 46,3,-27.03,"fish track mean TS -27.0 dB, above -35 dB (max alewife TS)",Claude from pydt4 gap-0 tracks (track_tows.py); margins 2 s and 1 m; user rule 2026-11-01
+58070,bad data 1,2005-08-27 02:39:06.5829,2005-08-27 02:39:12.5829,19.652,21.777,track 41,3,-27.73,"fish track mean TS -27.7 dB, above -35 dB (max alewife TS)",Claude from pydt4 gap-0 tracks (track_tows.py); margins 2 s and 1 m; user rule 2026-11-01
 59317,bad data 1,2006-08-18 22:45:59.7730,2006-08-18 22:46:04.0230,12.092,14.163,track 36,2,-33.86,"fish track mean TS -33.9 dB, above -35 dB (max alewife TS)",Claude from pydt4 gap-0 tracks (track_tows.py); margins 2 s and 1 m; user rule 2026-11-01
 76230,bad data 1,2007-08-28 23:49:55.0880,2007-08-28 23:49:59.4210,16.716,18.823,track 113,2,-32.79,"fish track mean TS -32.8 dB, above -35 dB (max alewife TS)",Claude from pydt4 gap-0 tracks (track_tows.py); margins 2 s and 1 m; user rule 2026-11-01
 76230,bad data 2,2007-08-28 23:49:56.0880,2007-08-28 23:50:00.4210,16.734,18.841,track 114,2,-33.18,"fish track mean TS -33.2 dB, above -35 dB (max alewife TS)",Claude from pydt4 gap-0 tracks (track_tows.py); margins 2 s and 1 m; user rule 2026-11-01

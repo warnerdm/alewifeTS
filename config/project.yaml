@@ -4,7 +4,7 @@
 # with in data/derived/run_log.csv; python/project.py warns when pydt4 is not at pydt4_commit (the commit the committed
 # outputs were made with).
 pydt4: D:/pyprojects/pydt4
-pydt4_commit: dec261e
+pydt4_commit: c59d9de
 
 # acoustic archive (read only). Only for --from-archive runs (tow matching) and step 09; the steps read the copies of the
 # ok tows' files in data/raw/acoustic (tow_files.csv) by default

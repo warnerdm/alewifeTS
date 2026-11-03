@@ -8,7 +8,7 @@ OP_ID,lake,year,vessel,transect,fishing_depth_m,acoustic_format,decision,reason,
 58070,Michigan,2005,88,no1,11.1,dt4,include,,294,215,used,
 58073,Michigan,2005,88,no1,20.6,dt4,exclude,target number,1,1,excluded,review: exclude (target number)
 58083,Michigan,2005,88,so5,14.2,dt4,exclude,target number,4,3,excluded,review: exclude (target number)
-58088,Michigan,2005,88,so5,13.2,dt4,include,,740,391,used,
+58088,Michigan,2005,88,so5,13.2,dt4,include,,739,390,used,
 58090,Michigan,2005,88,so4,74.3,dt4,exclude,wrong habitat/depth,42,8,excluded,review: exclude (wrong habitat/depth)
 58095,Michigan,2005,88,so4,9.5,dt4,include,,82,68,used,
 58100,Michigan,2005,88,wn2,6.5,dt4,include,,104,83,used,
@@ -32,7 +32,7 @@ OP_ID,lake,year,vessel,transect,fishing_depth_m,acoustic_format,decision,reason,
 76959,Michigan,2007,17,so1,15,dt4,include,,986,535,used,
 77501,Michigan,2008,88,nn5,11,dt4,include,,230,69,used,
 77519,Michigan,2008,88,wn2,7,dt4,exclude,target number,8,7,excluded,review: exclude (target number)
-77537,Michigan,2008,88,so4,13,dt4,include,,544,373,used,
+77537,Michigan,2008,88,so4,13,dt4,include,,543,372,used,
 77539,Michigan,2008,88,so2,11,dt4,include,,306,178,used,
 77541,Michigan,2008,88,wn1,12,dt4,include,,13,7,used,
 77546,Michigan,2008,88,so2,9,dt4,include,,185,110,used,

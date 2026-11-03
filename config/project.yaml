@@ -5,7 +5,7 @@
 pydt4: D:/pyprojects/pydt4
 
 # acoustic archive (read only). Tow matching searches it; the used tows' files are copied into data/raw/acoustic (step 09)
-acoustic_root: D:/Acoustics/Michigan/acoustic
+acoustic_root: 'D:\Acoustics\Michigan\acoustic'   # backslashes: the earlier runs' paths in the output tables
 acoustic_copies_dir: data/raw/acoustic
 
 # calibration table (pydt4's single master copy; Simrad calibrations are pydt4 tow_echograms.SIMRAD_CAL)

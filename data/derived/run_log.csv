@@ -1,0 +1,8 @@
+step,time,pydt4_commit,pydt4_uncommitted_changes,note
+01_make_run_list,2026-11-02T17:23:38,07d57ce,False,"211 tows (run with --derived scratch; outputs adopted 2026-11-02)"
+02_whole_column_targets,2026-11-02T18:28:54,07d57ce,False,"op_ids=all (run with --derived scratch; outputs adopted 2026-11-02)"
+03_fish_tracks,2026-11-02T18:38:57,07d57ce,False," (run with --derived scratch; outputs adopted 2026-11-02)"
+04_bad_data_regions,2026-11-02T18:39:02,07d57ce,False," (run with --derived scratch; outputs adopted 2026-11-02)"
+05_tow_run,2026-11-02T19:20:17,07d57ce,False,"op_ids=all (run with --derived scratch; outputs adopted 2026-11-02)"
+08_tow_selection,2026-11-02T19:49:25,c6392d9,False,""
+07_review_page,2026-11-02T19:49:42,c6392d9,False,""

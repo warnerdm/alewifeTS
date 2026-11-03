@@ -1,15 +1,21 @@
-# alewifeTS project settings, read by scripts/_project.py. Paths are relative to the project root unless absolute.
+# alewifeTS project settings, read by python/project.py. Paths are relative to the project root unless absolute.
 
 # pydt4 (the processing code; D:\pyprojects\pydt4, github.com/warnerdm/pydt4). Each step records the pydt4 commit it ran
-# with in data/derived/run_log.csv.
+# with in data/derived/run_log.csv; python/project.py warns when pydt4 is not at pydt4_commit (the commit the committed
+# outputs were made with).
 pydt4: D:/pyprojects/pydt4
+pydt4_commit: dec261e
 
-# acoustic archive (read only). Tow matching searches it; the used tows' files are copied into data/raw/acoustic (step 09)
+# acoustic archive (read only). Only for --from-archive runs (tow matching) and step 09; the steps read the copies of the
+# ok tows' files in data/raw/acoustic (tow_files.csv) by default
 acoustic_root: 'D:\Acoustics\Michigan\acoustic'   # backslashes: the earlier runs' paths in the output tables
 acoustic_copies_dir: data/raw/acoustic
 
-# calibration table (pydt4's single master copy; Simrad calibrations are pydt4 tow_echograms.SIMRAD_CAL)
-ecs_csv: D:/pyprojects/pydt4/data/ecs_parameters_usgs_steelhead.csv
+# calibration and instrument settings, the project's own copies (python/export_calibration.py, 2026-11-03):
+# dt4 calibrations (rows of pydt4's ECS table) and, per vessel-year, transducer depth, Simrad file clock, dt4 clock
+# offset and Simrad calibration (applied to pydt4 by python/project.py, pydt4 project_settings.apply)
+ecs_csv: calibration/ecs_parameters.csv
+instrument_settings: calibration/instrument_settings.csv
 
 # tow list (R/create_mwt_location_list_for_python.R) and the run list made from it (step 01)
 tow_list: data/raw/LM_tow_list_2005_2024.csv

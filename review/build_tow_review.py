@@ -27,9 +27,10 @@ import pandas as pd
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-PYDT4 = r"D:\pyprojects\pydt4"
-sys.path.insert(0, PYDT4)
 sys.path.insert(0, os.path.join(ROOT, "python"))
+from project import Project  # noqa: E402
+
+PYDT4 = Project().pydt4                    # pydt4 on the path, the project's instrument settings applied
 from bad_data import load_regions, target_mask  # noqa: E402
 from track_tows import transducer_depth  # noqa: E402
 from flagged_tracks import alewife_sizes  # noqa: E402

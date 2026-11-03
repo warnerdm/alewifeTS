@@ -7,9 +7,8 @@ targets used and fish per tow). Reads data/derived only (no --derived).
 import os
 import sys
 
-from _project import ROOT, Project
-
-sys.path.insert(0, os.path.join(ROOT, "python"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "python"))
+from project import ROOT, Project
 
 
 def main():

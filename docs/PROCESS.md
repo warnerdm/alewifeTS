@@ -1,7 +1,7 @@
 # alewifeTS process
 
 What each step does and the decisions behind it, with who decided and when. The dated session notes are in pydt4's
-`STATUS_log.md` (2026-11-01 b to 2026-11-02 m). Settled pydt4 conventions (clocks, depths, calibration, single-target
+`STATUS_log.md` (2026-11-01 b to 2026-11-03). Settled pydt4 conventions (clocks, depths, calibration, single-target
 settings, noise removal, bottom line) are in pydt4's `CLAUDE.md`.
 
 ## 0. Tow list
@@ -15,12 +15,16 @@ trawl files: tows with alewife >= 90% of the catch and >= 5 fish caught (user; n
 Excluded (user, 2026-11-01): FISHING_DEPTH < 5 m (31 tows; 5.0 kept); Steelhead 2004 (dual-beam; 13); Baird 2016 and
 2017 (no calibration session on disk; 5). 211 tows remain (181 dt4, 30 raw).
 
-## Calibration (in pydt4)
+## Calibration and instrument settings (`calibration/`)
 
-Each vessel-year uses the calibration table row in pydt4 (dt4) or `tow_echograms.SIMRAD_CAL` (Simrad). Added for
-alewifeTS (user, 2026-11-01): Sturgeon 2004 = the Tobermory values (the Port Washington session was weak and ~0.5 dB
-off); Baird 2012 file values, 2013 ER60 utility values, 2021 EK80 calibration XML. Open: the Sturgeon 2005 row has no
-recorded source (16 tows use it).
+The project's own copies of the settings, taken from pydt4's tables by `python/export_calibration.py` (2026-11-03) and
+applied to pydt4 by each step (`python/project.py`, pydt4 `project_settings.apply`): `ecs_parameters.csv` (the 34 dt4
+calibration table rows the run list uses, Michigan or all-lake rows, with their sources), `instrument_settings.csv` (45
+vessel-years: transducer depth, Simrad file clock, dt4 clock offset, Simrad calibration; EK80 reports resolved to values,
+a blank value = taken from each file) and `simrad_reports/` (the 8 EK80 calibration reports behind the Simrad values).
+Added for alewifeTS (user, 2026-11-01): Sturgeon 2004 = the Tobermory values (the Port Washington session was weak and
+~0.5 dB off); Baird 2012 file values, 2013 ER60 utility values (psi from each file), 2021 EK80 calibration XML (transducer
+depth from the file, 3.0 m). Open: the Sturgeon 2005 row has no recorded source (16 tows use it).
 
 ## Tow matching and start times (in the tow runs)
 
@@ -69,10 +73,17 @@ choice.
 
 ## 9. Copies of the acoustic files
 
-The 129 used tows' files (672, 16.2 GB) are in `data/raw/acoustic/` (user, 2026-11-02: used tows only).
-`--from-copies` runs steps 02, 05 and 06 from them (pydt4 `--file-list`); for the 129 used tows that gives the same
-results, targets, tracks and regions as the archive run (checked 2026-11-02). Unlike bloaterTS, which copies every ok
-tow, the excluded tows are not copied, so the review (step 07) still needs the archive.
+Every ok tow's files (204 tows, 1,150 files, 25.5 GB) are in `data/raw/acoustic/`, listed with SHA-256 in
+`tow_files.csv` (used tows first, user 2026-11-02; the other 75 ok tows added, user 2026-11-03, as bloaterTS). Steps 02,
+05 and 06 run from them by default (pydt4 `--file-list`); `--from-archive` matches the tows to the archive instead.
+
+Full check (2026-11-03): steps 01-06 rerun from the copies with `calibration/` give the same numbers as the archive run
+for all 204 ok tows (tow results, whole-column results, single targets, 30,090 tracks, flags, 50 regions; 203 of 204
+bottom lines byte-identical). Differences, none in a result: source text (the Simrad calibration source names the
+project's report copy; `vessel_name_in_path` blank), the 7 non-ok tows are `not_in_file_list`, and 80756's echogram ends
+a few minutes earlier (three passive files after the tow are not copies). The rerun was adopted, so the committed tables
+hold project-relative paths; the review page and tow selection rebuilt from it are unchanged (page: 80756's echogram
+only).
 
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 

@@ -2,10 +2,12 @@ library(tidyverse)
 library(lubridate)
 ################################################################################
 #now get trawl summary info for LM 
-optroplist <- list.files("D:\\Acoustics\\EchoNet2Fish_LM\\",
+# the project's copies of D:\Acoustics\EchoNet2Fish_LM\MI<year>\ (byte-identical, checked 2026-11-03); run from the
+# project root (alewifeTS.Rproj)
+optroplist <- list.files("data/raw/trawl",
                          pattern ="optrop", full.names = T,
                          recursive=T)
-catchlist <- list.files("D:\\Acoustics\\EchoNet2Fish_LM\\",
+catchlist <- list.files("data/raw/trawl",
                         pattern ="Acoustic_tr_catch", full.names = T,
                         recursive=T)
 op_data <- read_csv(optroplist)%>%
@@ -83,7 +85,7 @@ final_list <- tow_list%>%
   mutate(fishing_depth_source ="sensor(Simrad/Netmind/Marport)")
 
 
-write.csv(final_list, "D:/pyprojects/alewifeTS/data/raw/LM_tow_list_2005_2024.csv", row.names = FALSE)
+write.csv(final_list, "data/raw/LM_tow_list_2005_2024.csv", row.names = FALSE)
 
 
 

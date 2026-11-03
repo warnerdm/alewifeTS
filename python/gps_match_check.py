@@ -20,8 +20,10 @@ import warnings
 import numpy as np
 import pandas as pd
 
-PYDT4 = r"D:\pyprojects\pydt4"
-sys.path.insert(0, PYDT4)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from project import Project  # noqa: E402
+
+PYDT4 = Project().pydt4
 import grid  # noqa: E402
 import tow_matching as tm  # noqa: E402
 from run_tow_batch import apply_tow_corrections  # noqa: E402

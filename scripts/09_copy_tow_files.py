@@ -7,9 +7,8 @@ and archived with the project. Reads the acoustic archive. Safe to rerun (files 
 import os
 import sys
 
-from _project import ROOT, Project
-
-sys.path.insert(0, os.path.join(ROOT, "python"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "python"))
+from project import ROOT, Project
 
 
 def main():

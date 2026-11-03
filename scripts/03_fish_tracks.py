@@ -1,14 +1,16 @@
 """Step 03: gap-0 fish tracks of the whole-column targets (pydt4 track_tows.py; Echoview 4D alpha-beta tracker, maximum
 gap 0, minimum 2 targets / 2 pings, as bloaterTS). All tows of the step-02 results.
 Writes data/derived/whole_column/tracks/tracks.csv (one row per track; n_in_band = targets in the tow band) and
-tracks/targets/<OP_ID>_tracked.csv. Reads the files listed in step 02's results (ping times and GPS): the archive's,
-or the copies' when step 02 ran with --from-copies.
+tracks/targets/<OP_ID>_tracked.csv. Reads the files listed in step 02's results (ping times and GPS): the copies', or the archive's when step 02 ran with
+--from-archive.
 
     python scripts/03_fish_tracks.py
 """
 import os
+import sys
 
-from _project import Project, args
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "python"))
+from project import Project, args
 
 
 def main():

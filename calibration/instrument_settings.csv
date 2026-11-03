@@ -1,0 +1,46 @@
+vessel,year,format,transducer_depth_m,file_clock_to_tow_hours,dt4_clock_offset_min,simrad_cal,gain_db,sa_correction_db,psi_db,beamwidth_along_deg,beamwidth_athw_deg,offset_along_deg,offset_athw_deg,source
+17,2005,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2007,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2009,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2010,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2011,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2012,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2013,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2014,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2015,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2016,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2017,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2018,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2019,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2021,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2022,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2023,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+17,2024,dt4,1.0,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+35,2011,raw,2.7,0.0,,file,,,,,,,,values stored in each survey file (pydt4 SIMRAD_CAL 'file')
+35,2012,raw,2.7,0.0,,file,,,,,,,,values stored in each survey file (pydt4 SIMRAD_CAL 'file')
+35,2013,raw,2.7,0.0,,values,26.43,-0.55,,6.48,6.52,-0.01,-0.09,"ER60 calibration utility 19 Aug 2013 (Baird, s/n 309), beam-model results; psi from the file; pydt4 SIMRAD_CAL dict (blank = each file's)"
+35,2014,raw,2.7,0.0,,values,26.864,-0.5774,-20.1,6.16,6.14,0.15,-0.17,EK80 calibration report 2026-09-30T20:14:03.7065254-04:00 + gain correction +0.074 dB; pydt4 SIMRAD_CAL: D:\pyprojects\pydt4\data\Calibration_2014\baird\USFWS CalibrationFiles\cal_120kHz_256us_3rdtry\CalibrationDataFile-baird 120khz2014.xml; copy: calibration\simrad_reports\35_2014_CalibrationDataFile-baird 120khz2014.xml
+35,2018,raw,3.0,-4.0,,values,26.72,-0.5773,-20.7,6.6,6.55,-0.01,-0.14,EK80 calibration report 2026-10-02T07:12:31.3338512-04:00; pydt4 SIMRAD_CAL: D:\pyprojects\pydt4\data\Calibration_2018\baird\CalibrationDataFile-vessel35-year2018-08-07-120khz.xml; copy: calibration\simrad_reports\35_2018_CalibrationDataFile-vessel35-year2018-08-07-120khz.xml
+35,2021,raw,,-4.0,,values,26.71,-0.6001,-20.7,6.69,6.68,-0.02,-0.14,EK80 calibration report 2021-10-04T09:08:38.4790656-05:00; pydt4 SIMRAD_CAL: D:\pyprojects\pydt4\data\Calibration_2021\baird\120kHz\Aug7_2021_120khz_38mm_256ms_CalDatFile-D20210807-T090127.xml; copy: calibration\simrad_reports\35_2021_Aug7_2021_120khz_38mm_256ms_CalDatFile-D20210807-T090127.xml
+35,2022,raw,3.0,-4.0,,values,26.89,-0.5715,-20.7,6.36,6.51,-0.06,-0.13,EK80 calibration report 2022-08-04T10:20:07.6386049-04:00; pydt4 SIMRAD_CAL: D:\pyprojects\pydt4\data\Calibration_2022\baird\120kHz\CalibrationDataFile-D20220804-T100042.xml; copy: calibration\simrad_reports\35_2022_CalibrationDataFile-D20220804-T100042.xml
+35,2023,raw,3.0,-4.0,,values,26.85,-0.5849,-20.7,6.52,6.61,-0.03,-0.16,EK80 calibration report 2023-07-27T11:24:47.5491158-04:00; pydt4 SIMRAD_CAL: D:\pyprojects\pydt4\data\Calibration_2023\baird\BairdCal_27July2023_120kHz_250W_256ms\CalibrationDataFile-D20230727-T110727.xml; copy: calibration\simrad_reports\35_2023_CalibrationDataFile-D20230727-T110727.xml
+35,2024,raw,3.0,-4.0,,values,26.55,-0.5971,-20.7,6.54,6.56,-0.01,-0.13,EK80 calibration report 2024-08-06T10:15:50.5002054-04:00; pydt4 SIMRAD_CAL: D:\Acoustics\Michigan\acoustic\2024\calibration\baird\120kHz_cal_250w_.256ms\CalibrationDataFile1-D20240806-T094852.xml; copy: calibration\simrad_reports\35_2024_CalibrationDataFile1-D20240806-T094852.xml
+88,2004,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2005,dt4,1.8,,301.0,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2006,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2007,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2008,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2009,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2010,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2011,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2012,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2013,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2014,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2015,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2016,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2017,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2018,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2019,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2021,dt4,1.8,,,,,,,,,,,transducer depth: pydt4 transducer_depth.py
+88,2022,raw,2.04,-4.0,,values,27.0,-0.1713,-20.7,6.38,6.4,0.02,-0.04,EK80 calibration report 2026-10-01T08:07:17.5507541-04:00; pydt4 SIMRAD_CAL: D:\pyprojects\pydt4\data\Calibration_2022\sturgeon\120khz_256us\CalibrationDataFile-vessel88-year2022-120khz.xml; copy: calibration\simrad_reports\88_2022_CalibrationDataFile-vessel88-year2022-120khz.xml
+88,2023,raw,2.04,-4.0,,values,27.03,-0.1671,-20.7,6.38,6.38,0.0,-0.03,EK80 calibration report 2026-10-01T09:10:09.8591459-04:00; pydt4 SIMRAD_CAL: D:\pyprojects\pydt4\data\Calibration_2023\sturgeon\120khz\CalibrationDataFile-vessel88-year2023-09-10-120khz.xml; copy: calibration\simrad_reports\88_2023_CalibrationDataFile-vessel88-year2023-09-10-120khz.xml

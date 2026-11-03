@@ -5,9 +5,11 @@ decisions if missing; never overwritten). No acoustic files needed. Reads data/d
     python scripts/07_review_page.py
 """
 import os
+import sys
 import runpy
 
-from _project import ROOT, Project
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "python"))
+from project import ROOT, Project
 
 
 def main():

@@ -5,9 +5,13 @@ Writes data/derived/LM_tow_list_alewife_run.csv (211 tows).
 
     python scripts/01_make_run_list.py
 """
+import os
+import sys
+
 import pandas as pd
 
-from _project import Project, args
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "python"))
+from project import Project, args
 
 
 def main():

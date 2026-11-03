@@ -1,5 +1,6 @@
-"""Copy the acoustic data files of the used tows (data/derived/tow_selection.csv, status "used") into the project,
-as bloaterTS scripts/03_copy_tow_files.py (user, 2026-11-02: the 129 used tows only):
+"""Copy the acoustic data files of every ok tow (data/derived/tow_results.csv, status "ok") into the project, as
+bloaterTS scripts/03_copy_tow_files.py (user: the 129 used tows on 2026-11-02, all 204 ok tows on 2026-11-03, so the
+review and the exclusions can be rerun without the archive too):
 
     data/raw/acoustic/<year>/<vessel>/<transect>/<file name>
 
@@ -45,16 +46,15 @@ def copy_with_hash(source, dest):
 
 
 def file_list():
-    sel = pd.read_csv(os.path.join(ROOT, "data", "derived", "tow_selection.csv"))
-    sel = sel[sel.status == "used"].set_index("OP_ID")
+    """One row per (tow, file) for every ok tow. Tows already in tow_files.csv keep their rows (their source paths are
+    the archive's; tow_results' files_used are the copies' once the steps run --from-copies)."""
+    tows = pd.read_csv(os.path.join(ROOT, "data", "derived", "LM_tow_list_alewife_run.csv")).set_index("OP_ID")
     res = pd.read_csv(os.path.join(ROOT, "data", "derived", "tow_results.csv"))
-    res = res[(res.status == "ok") & res.OP_ID.isin(sel.index)].drop_duplicates("OP_ID", keep="last")
-    missing = sorted(set(sel.index) - set(res.OP_ID))
-    if missing:
-        raise ValueError(f"used tows without an ok tow run row: {missing}")
-    rows = []
-    for r in res.itertuples():
-        t = sel.loc[r.OP_ID]
+    res = res[res.status == "ok"].drop_duplicates("OP_ID", keep="last")
+    old = pd.read_csv(FILES_CSV) if os.path.exists(FILES_CSV) else pd.DataFrame(columns=["OP_ID"])
+    rows = old[old.OP_ID.isin(res.OP_ID)].drop(columns="sha256", errors="ignore").to_dict("records")
+    for r in res[~res.OP_ID.isin(old.OP_ID)].itertuples():
+        t = tows.loc[r.OP_ID].rename(str.lower)
         for src in str(r.files_used).split(";"):
             dest = os.path.join(COPIES, str(t.year), VESSEL_NAMES[int(t.vessel)], str(t.transect).lower(),
                                 os.path.basename(src))

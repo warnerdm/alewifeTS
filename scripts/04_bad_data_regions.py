@@ -8,9 +8,8 @@ Writes config/bad_data_regions/regions.csv (read by the tow run, step 05). No ac
 import os
 import sys
 
-from _project import ROOT, Project, args
-
-sys.path.insert(0, os.path.join(ROOT, "python"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "python"))
+from project import ROOT, Project, args
 
 
 def main():

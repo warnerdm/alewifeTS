@@ -1,0 +1,26 @@
+# Python environment for alewifeTS and pydt4 (the versions the committed outputs were made with, 2026-11-03; the
+# user's conda env "echopype"). pydt4 itself is not a package: config/project.yaml gives its folder and commit.
+#   conda env create -f environment.yml
+#   conda activate alewifets
+# Windows: when running python.exe directly (not from an activated Anaconda Prompt), put the env's DLL folders first on
+# PATH (Library\bin etc.), or numpy's linear algebra fails (pydt4 CLAUDE.md).
+name: alewifets
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.14
+  - numpy=2.5.3
+  - pandas=3.0.6
+  - scipy=1.18.1
+  - matplotlib=3.11.2
+  - pyyaml=6.0.3
+  - geographiclib=2.1
+  - xarray=2026.7.0          # echopype (Simrad .raw reading)
+  - netcdf4=1.7.4
+  - zarr=3.4.0
+  - dask=2026.8.0
+  - pip
+  - pip:
+      - echopype==0.11.1     # pydt4 ek80_reader reads .raw files with it
+      - diptest==0.11.0      # python/within_fish.py
+# R (only for R/create_mwt_location_list_for_python.R, the tow list): R 4.4.0.

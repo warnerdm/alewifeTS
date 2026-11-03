@@ -21,7 +21,8 @@ def main(wc, out_csv):
     fl = pd.read_csv(os.path.join(wc, "flags", "flagged_tracks.csv"))
     fl = fl[fl.abs35]
     res = pd.concat([pd.read_csv(os.path.join(wc, f)) for f in ("tow_results_column.csv", "tow_results_column_simrad.csv")])
-    sys.path.insert(0, r"D:\pyprojects\pydt4")
+    from project import Project
+    Project()                                                     # pydt4 on the path, the project's settings
     from track_tows import transducer_depth                       # the run's depth (file's own if not tabulated)
     res = res.drop_duplicates("OP_ID", keep="last").set_index("OP_ID")
     rows = []

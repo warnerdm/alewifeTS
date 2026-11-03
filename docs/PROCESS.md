@@ -114,6 +114,18 @@ the -60 dB subset equals step 05 in all 121 analysis tows (same targets, mean TS
 targets it adds pull the large-fish tows down more than the small-fish tows, so truncation of small alewife at -60 dB does
 not explain the low slope.
 
+## 12. Weak targets in adult-alewife tows (exploratory, 2026-11-03)
+
+Every model tow has a group of weak targets (mode about -63 to -67 dB at the -77 dB detection) in the tow region; its
+upper tail passes the -60 dB floor. In adult tows (alewife expected near -45 to -38 dB) it pulls the mean TS down: adults
+sit 4-5 dB below Warner, Rudstam and Klumb (2002) on length (TS = 20.53 log10 L - 64.25, 70 kHz). Examples:
+`python/weak_targets_examples.py`. Not specific to vessel, system or region; weak targets per ping are as high or higher in
+small-alewife tows. bloaterTS escaped it because its adult tows were deep (>= 45 m: 0.003 weak targets per ping vs 0.13
+in the alewife tows). A higher floor for adult tows rejected (user: statistically wrong; the mean keeps rising with the
+floor up to -50 dB, no plateau). Tracked targets only (`python/tracked_ts.py`, `R/tracked-ts-model.R`): weak targets
+track nearly as often as alewife-size ones (-60 to -55 dB: 60% in tracks; >= -50 dB: 73%), so the slope barely moves
+(13.0 all, 13.2 tracked, 13.6 per fish) and adults stay about 4 dB below Warner.
+
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 
 As bloaterTS's fish-track experiment (`echoview/experiments/fish_tracks_all_gap0/`), from pydt4's gap-0 tracks of the

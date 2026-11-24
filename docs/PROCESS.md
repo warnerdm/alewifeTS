@@ -166,6 +166,13 @@ bloaterTS: slope 0.90, R2m 0.61. Region Sv tracks the alewife catch much more we
 Flagged: 127534 (-2.2), 85081 (-2.1), 107720 (+2.0), 81839 (+2.1), about what chance gives; 78795 -1.88. Small
 (< 100 mm, 65 tows) and adult (56 tows) alewife give similar weak slopes (0.29, 0.40).
 Outputs: data/derived/acoustic_trawl_screen.csv, review/acoustic_trawl_screen.png.
+Fish density (user 2026-11-24; `R/acoustic-trawl-density.R`, as the bloaterTS manuscript chunk acoustic-trawl-density):
+density = region sv / tow mean sigma_bs; lm(log10 density ~ log10 alewife per minute), 121 tows. Slope / R2 by the
+mean TS used: -60 dB 0.43 (0.27-0.60) / 0.18; -63 0.41 / 0.17; -66 0.38 / 0.16; -70 0.32 / 0.13; -77 0.25 / 0.09;
+Brooking-Rudstam catch-based at -60 (117 tows) 0.46 / 0.19. bloaterTS (112 tows): 0.87 / 0.38 at -60 to 0.72 / 0.23 at -77.
+Adult tows (mean length >= 100 mm) sit below small-alewife tows at the same catch rate: offset -0.62 log10 at -60 dB
+(density x 0.24; R2 0.18 -> 0.43 with the term), -0.28 at -77 dB, -0.71 with Brooking-Rudstam. 78795 is low in every panel.
+Outputs: data/derived/acoustic_trawl_density.csv (fits), acoustic_trawl_density_tows.csv, review/acoustic_vs_trawl_density.png.
 
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 

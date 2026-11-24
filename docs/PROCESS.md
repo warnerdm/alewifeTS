@@ -165,6 +165,8 @@ targets used, 129 used tows.
   since no alewife tow is deep (user); dip test only in tows with >= 20 fish. 34 tows, 535 fish, 3,078 deviations:
   unimodality not rejected in any of the 9 tested tows (p >= 0.95); pooled SD 3.2 dB (robust 1.45 dB; heavy tails),
   flat with off-axis angle. User: alewife can have a wider within-fish TS distribution ex situ.
+  Rerun 2026-11-24 (user) on the current tracks, after the Sturgeon 2005 calibration replacement: only 58088 changes
+  (SD 2.99 -> 3.33 dB, same 5 fish / 20 deviations); pooled SD 3.24 dB, angle-bin SDs move <= 0.03 dB. Conclusions unchanged.
 - `python/track_summary.py` -> `data/derived/track_summary/`: per tow, targets used per detection / per fish / within
   fish (tracks >= 4 targets, deviations from the track mean scaled by sqrt(n/(n-1)) for track length; user), and
   `tow_track_summary.csv`. Median share of targets in tracks 0.64, 2 targets per fish; per-fish minus per-detection mean

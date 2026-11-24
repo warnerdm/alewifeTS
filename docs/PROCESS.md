@@ -156,6 +156,17 @@ Extrapolation below 58 mm (user: no way to limit sizes to 58-159 mm): sensitivit
 length groups < 58 mm (smaller fish may be more unimodal): small-tow TS +0.2 dB (max +0.56), slope 14.8 (13.4-16.3) vs 15.3;
 the extrapolated curve shape matters little.
 
+## 15. Acoustic-trawl screen (exploratory, 2026-11-24)
+
+`R/acoustic-trawl-screen.R` (user, after tow 78795: largest catch of any tow, 1,919 alewife in 32 min, region Sv
+-79.9 dB), as bloaterTS R/acoustic-trawl-screen.R: lm(log10 sv ~ log10 alewife per minute + log10 L), 121 analysis
+tows, region Sv from pydt4 tow_results.csv. Flag only (|std residual| > 2), nothing dropped.
+Result: slope 0.34 (SE 0.08), length -0.37 (SE 0.22, p 0.09), R2 0.18, residual SD 0.51 log10 units (5.1 dB);
+bloaterTS: slope 0.90, R2m 0.61. Region Sv tracks the alewife catch much more weakly than it tracks bloater.
+Flagged: 127534 (-2.2), 85081 (-2.1), 107720 (+2.0), 81839 (+2.1), about what chance gives; 78795 -1.88. Small
+(< 100 mm, 65 tows) and adult (56 tows) alewife give similar weak slopes (0.29, 0.40).
+Outputs: data/derived/acoustic_trawl_screen.csv, review/acoustic_trawl_screen.png.
+
 ## Exploratory: tracks and within-fish TS (2026-11-02)
 
 As bloaterTS's fish-track experiment (`echoview/experiments/fish_tracks_all_gap0/`), from pydt4's gap-0 tracks of the

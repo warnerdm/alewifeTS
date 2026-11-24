@@ -172,6 +172,10 @@ mean TS used: -60 dB 0.43 (0.27-0.60) / 0.18; -63 0.41 / 0.17; -66 0.38 / 0.16; 
 (a Brooking-Rudstam catch-based panel, 117 tows, 0.46 / 0.19, was dropped from the script and figure, user). bloaterTS (112 tows): 0.87 / 0.38 at -60 to 0.72 / 0.23 at -77.
 Adult tows (mean length >= 100 mm) sit below small-alewife tows at the same catch rate: offset -0.62 log10 at -60 dB
 (density x 0.24; R2 0.18 -> 0.43 with the term), -0.28 at -77 dB, -0.71 with Brooking-Rudstam. 78795 is low in every panel.
+Age groups (user 2026-11-24: 100 mm tow mean length is a good approximation of age-0 vs older), -60 dB:
+log10 density = -2.444 + 0.341 log10 cpue - 0.620 [age-1+]; slope SE 0.071, offset SE 0.086 (95% CI -0.791 to -0.450);
+R2 0.432, residual SD 0.466 log10; 65 age-0 / 56 age-1+ tows; separate slopes not needed (p 0.82). Age-1+ density at
+equal catch = 0.24 (0.16-0.36) of age-0. data/derived/acoustic_trawl_density_age.csv, review/acoustic_vs_trawl_density_age.png.
 Outputs: data/derived/acoustic_trawl_density.csv (fits), acoustic_trawl_density_tows.csv, review/acoustic_vs_trawl_density.png.
 
 ## Exploratory: tracks and within-fish TS (2026-11-02)

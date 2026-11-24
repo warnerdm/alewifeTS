@@ -70,3 +70,38 @@ p <- density_data %>%
        caption = "Line: lm(log10 density ~ log10 catch per minute).") +
   theme_bw() + theme(panel.grid = element_blank(), legend.position = "top")
 ggsave(here("review", "acoustic_vs_trawl_density.png"), p, width = 9, height = 6.8, dpi = 150)
+
+# Age groups at -60 dB (user, 2026-11-24): tow mean length < 100 mm ~ age-0, >= 100 mm ~ age-1 and older.
+#   m_age:  log10 density ~ log10 cpue + age group (parallel lines; the group offset is the density ratio at equal catch)
+#   m_int:  with a slope per group, to check the lines are parallel
+AGE_SPLIT_MM <- 100
+d60 <- density_data %>%
+  filter(ts_choice == "-60 dB") %>%
+  mutate(age = factor(if_else(Length < AGE_SPLIT_MM, "age-0 (< 100 mm)", "age-1+ (>= 100 mm)")))
+m_age <- lm(log10(density) ~ log10(cpue) + age, data = d60)
+m_int <- lm(log10(density) ~ log10(cpue) * age, data = d60)
+ci_age <- confint(m_age)
+age_fit <- tibble(term = names(coef(m_age)), estimate = coef(m_age), se = summary(m_age)$coefficients[, 2],
+                  lo = ci_age[, 1], hi = ci_age[, 2]) %>%
+  mutate(n = nobs(m_age), r2 = summary(m_age)$r.squared, resid_sd_log10 = sigma(m_age),
+         slope_difference_p = anova(m_age, m_int)$`Pr(>F)`[2])
+print(age_fit %>% mutate(across(where(is.double), ~ signif(.x, 4))), width = 200)
+off <- age_fit %>% filter(str_detect(term, "age"))
+cat(sprintf("age-1+ density / age-0 density at equal catch: %.2f (95%% CI %.2f-%.2f)\n",
+            10^off$estimate, 10^off$lo, 10^off$hi))
+write_csv(age_fit, here("data", "derived", "acoustic_trawl_density_age.csv"))
+
+lines_age <- d60 %>%
+  reframe(cpue = 10^seq(log10(min(cpue)), log10(max(cpue)), length.out = 50), .by = age)
+lines_age$density <- 10^predict(m_age, newdata = lines_age)
+p_age <- ggplot(d60, aes(cpue, density, colour = age)) +
+  geom_point(size = 1.8) +
+  geom_line(data = lines_age, linewidth = 0.8) +
+  scale_x_log10() + scale_y_log10() +
+  scale_colour_manual(values = c("#1b9e77", "#7570b3"), name = NULL) +
+  labs(x = "Alewife caught per minute", y = expression("Acoustic density (fish m"^-3*")"),
+       caption = sprintf(paste0("Lower TS limit -60 dB; %d tows. Lines: log10 density ~ log10 catch per minute + age ",
+                                "group;\nage-1+ / age-0 density at equal catch %.2f (%.2f-%.2f)."),
+                         nrow(d60), 10^off$estimate, 10^off$lo, 10^off$hi)) +
+  theme_bw() + theme(panel.grid = element_blank(), legend.position = "top")
+ggsave(here("review", "acoustic_vs_trawl_density_age.png"), p_age, width = 6.5, height = 5, dpi = 150)

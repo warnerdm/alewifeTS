@@ -59,16 +59,12 @@ screen_data %>%
   mutate(across(c(Length, sv_mean_db, resid_std), ~ round(.x, 1)), review_note = str_trunc(review_note, 60)) %>%
   print(n = Inf, width = 200)
 
-# figure: region Sv against catch rate, coloured by mean length, flagged tows labelled
+# figure: region Sv against catch rate, coloured by mean length (no tows marked or labelled, user 2026-11-24)
 p_screen <- screen_data %>%
   ggplot(aes(N_catch / TOW_TIME, sv_mean_db)) +
-  geom_point(aes(colour = Length, shape = flagged), size = 2) +
-  geom_text(data = ~ filter(.x, flagged | OP_ID == 78795), aes(label = OP_ID), size = 2.6, vjust = -0.8) +
+  geom_point(aes(colour = Length), size = 2) +
   scale_x_log10() +
   scale_colour_viridis_c(name = "Mean length (mm)") +
-  scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 17), guide = "none") +
-  labs(x = "Alewife caught per minute", y = "Region Sv (dB)",
-       caption = paste0("Triangles, labelled: residual beyond ", FLAG_SD,
-                        " SD from log10 sv ~ log10 catch rate + log10 length (78795 labelled too).")) +
+  labs(x = "Alewife caught per minute", y = "Region Sv (dB)") +
   theme_bw() + theme(panel.grid = element_blank(), legend.position = "top")
 ggsave(here("review", "acoustic_trawl_screen.png"), p_screen, width = 6.5, height = 5, dpi = 150)

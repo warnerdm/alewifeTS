@@ -8,8 +8,7 @@
 # Mean sigma_bs choices:
 #   lower TS limits -60 / -63 / -66 / -70 / -77 dB: tow mean TS at each limit (data/derived/ts_floor/tow_ts_by_floor.csv;
 #     -60 = the analysis tow mean TS). A lower limit gives a smaller sigma_bs, so a higher density.
-#   Brooking and Rudstam (2009) catch-based correction at -60 dB (data/derived/catch_based/catch_based.csv,
-#     mean_ts_corrected; 117 model tows only).
+#   (The Brooking and Rudstam catch-based mean TS was a sixth choice on 2026-11-24 and was then dropped, user.)
 # Region Sv: pydt4 (data/derived/tow_results.csv mean_sv_db), as R/acoustic-trawl-screen.R. Tows: the 121 analysis tows.
 # Descriptive only; nothing dropped.
 # Outputs: data/derived/acoustic_trawl_density.csv (fits), acoustic_trawl_density_tows.csv (per tow),
@@ -27,20 +26,17 @@ tow_minutes <- read_csv(here("data", "derived", "LM_tow_list_alewife_run.csv"), 
   select(OP_ID, TOW_TIME)
 ts_floor <- read_csv(here("data", "derived", "ts_floor", "tow_ts_by_floor.csv"), show_col_types = FALSE) %>%
   transmute(OP_ID, ts_choice = paste(floor, "dB"), meanTS)
-ts_cb <- read_csv(here("data", "derived", "catch_based", "catch_based.csv"), show_col_types = FALSE) %>%
-  transmute(OP_ID, ts_choice = "Brooking-Rudstam, -60 dB", meanTS = mean_ts_corrected)
-choices <- c(paste(c(-60, -63, -66, -70, -77), "dB"), "Brooking-Rudstam, -60 dB")
+choices <- paste(c(-60, -63, -66, -70, -77), "dB")
 
 density_data <- tows %>%
   left_join(region_sv, by = "OP_ID") %>%
   left_join(tow_minutes, by = "OP_ID") %>%
-  inner_join(bind_rows(ts_floor, ts_cb), by = "OP_ID", relationship = "one-to-many") %>%
-  filter(!is.na(meanTS)) %>%
+  inner_join(ts_floor, by = "OP_ID", relationship = "one-to-many") %>%
   mutate(ts_choice = factor(ts_choice, levels = choices),
          cpue      = N_catch / TOW_TIME,
          density   = 10^(sv_mean_db / 10) / 10^(meanTS / 10))      # fish per m3
 stopifnot(!anyNA(density_data$density), !anyNA(density_data$cpue),
-          all(count(density_data, ts_choice)$n[1:5] == nrow(tows)))
+          all(count(density_data, ts_choice)$n == nrow(tows)))
 
 density_fit <- function(d) {
   m  <- lm(log10(density) ~ log10(cpue), data = d)
@@ -66,12 +62,11 @@ cat(sprintf("\nRegion sv alone (no TS): slope %.3f, R2 %.3f\n", coef(m_sv)[2], s
 p <- density_data %>%
   ggplot(aes(cpue, density)) +
   geom_point(aes(colour = Length), size = 1.4) +
-  geom_point(data = ~ filter(.x, OP_ID == 78795), shape = 1, size = 3.5, colour = "red") +
   geom_smooth(method = "lm", formula = y ~ x, se = FALSE, colour = "black", linewidth = 0.5) +
   scale_x_log10() + scale_y_log10() +
   scale_colour_viridis_c(name = "Mean length (mm)") +
   facet_wrap(~ts_choice, nrow = 2) +
   labs(x = "Alewife caught per minute", y = expression("Acoustic density (fish m"^-3*")"),
-       caption = "Red circle: 78795. Line: lm(log10 density ~ log10 catch per minute).") +
+       caption = "Line: lm(log10 density ~ log10 catch per minute).") +
   theme_bw() + theme(panel.grid = element_blank(), legend.position = "top")
-ggsave(here("review", "acoustic_vs_trawl_density.png"), p, width = 9, height = 6.5, dpi = 150)
+ggsave(here("review", "acoustic_vs_trawl_density.png"), p, width = 9, height = 6.8, dpi = 150)
